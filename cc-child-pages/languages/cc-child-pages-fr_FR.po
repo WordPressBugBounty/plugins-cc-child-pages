@@ -1,0 +1,236 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CC Child Pages\n"
+"POT-Creation-Date: 2023-01-17 15:43+0000\n"
+"PO-Revision-Date: 2023-01-17 15:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: index.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/ccchildpages.php:77
+msgid "Read more ..."
+msgstr "Plus ..."
+
+#: includes/ccchildpages.php:579
+msgid "Author: "
+msgstr "Auteur: "
+
+#: includes/ccchildpages.php:583
+msgid "Created: "
+msgstr "Créé: "
+
+#: includes/ccchildpages.php:587
+msgid "Modified: "
+msgstr "Modifié: "
+
+#: includes/ccchildpages.php:1015
+msgid "CC Child Pages options"
+msgstr "CC Child Pages options"
+
+#: includes/ccchildpages.php:1016
+msgid "Add button to the visual editor:"
+msgstr "Ajouter bouton pour l'éditeur visual."
+
+#: includes/ccchildpages.php:1017
+msgid "Enqueue Skins CSS:"
+msgstr ""
+
+#: includes/ccchildpages.php:1023
+msgid "Custom CSS:"
+msgstr "CSS: "
+
+#: includes/ccchildpages.php:1025
+#, fuzzy
+msgid ""
+"This function is deprecated and may be removed in future releases. It is "
+"strongly recommended that all custom CSS is moved to the theme customiser."
+msgstr ""
+"Cette fonction est obsolète et peut être supprimée dans les prochaines "
+"versions. Il est fortement recommandé de déplacer tous les CSS "
+"personnalisés vers le personnalisateur de thème."
+
+#: includes/ccchildpages.php:1028
+msgid "Update Options"
+msgstr "Options Mise à jour"
+
+#: includes/ccchildpages.php:1146 includes/ccchildpages.php:1161
+msgid "Rate this plugin..."
+msgstr "Évaluez ce plugin..."
+
+#: includes/ccchildpages.php:1160
+msgid "Settings..."
+msgstr "Paramètres..."
+
+#: includes/ccchildpages.php:1162
+#, fuzzy
+#| msgid "Donate..."
+msgid "Please donate..."
+msgstr "Donner..."
+
+#: includes/ccchildpages.php:1162
+msgid "(Your donations keep this plugin free &amp; supported)"
+msgstr "(Vos dons garder ce plugin gratuit & amp; prise en charge)"
+
+#. Plugin Name of the plugin/theme
+#: includes/ccchildpages_widget.php:16
+msgid "CC Child Pages"
+msgstr ""
+
+#: includes/ccchildpages_widget.php:17
+msgid "Displays current child pages as a menu"
+msgstr "Affiche pages enfant actuels comme un menu"
+
+#: includes/ccchildpages_widget.php:113
+msgid "Title:"
+msgstr "Titre:"
+
+#: includes/ccchildpages_widget.php:117
+msgid "Show Page Title:"
+msgstr "Afficher le titre de la page:"
+
+#: includes/ccchildpages_widget.php:119
+msgid "Overrides the Title field, unless parent page has no parent."
+msgstr "Remplace le champ Titre, sauf si la page parent n'a pas de parent."
+
+#: includes/ccchildpages_widget.php:122
+msgid "Sort by:"
+msgstr "Trier par :"
+
+#: includes/ccchildpages_widget.php:124
+msgid "Page title"
+msgstr "Page titre"
+
+#: includes/ccchildpages_widget.php:125
+msgid "Page order"
+msgstr "Ordre des pages"
+
+#: includes/ccchildpages_widget.php:126
+msgid "Page ID"
+msgstr ""
+
+#: includes/ccchildpages_widget.php:127
+msgid "Date created"
+msgstr "Date de création"
+
+#: includes/ccchildpages_widget.php:128
+msgid "Date modified"
+msgstr "Date modifiée"
+
+#: includes/ccchildpages_widget.php:129
+msgid "Page author"
+msgstr "Auteur de la page"
+
+#: includes/ccchildpages_widget.php:130
+msgid "Comment count"
+msgstr "Nombre de commentaires"
+
+#: includes/ccchildpages_widget.php:131
+msgid "Random"
+msgstr "Aléatoire"
+
+#: includes/ccchildpages_widget.php:135
+msgid "Exclude:"
+msgstr "Exclure: "
+
+#: includes/ccchildpages_widget.php:137
+msgid "Page IDs, separated by commas."
+msgstr "ID de page, séparés par des virgules."
+
+#: includes/ccchildpages_widget.php:140
+#, fuzzy
+msgid "Exclude Tree:"
+msgstr "Exclure la structure arborescente:"
+
+#: includes/ccchildpages_widget.php:142
+#, fuzzy
+msgid ""
+"Page IDs, separated by commas.<br />Similar to Exclude, but will also "
+"exclude children of the pages in the list."
+msgstr ""
+"ID de page, séparés par des virgules.<br />Similaire à Exclure, mais "
+"exclura également les enfants des pages de la liste."
+
+#: includes/ccchildpages_widget.php:145
+msgid "Show All Pages:"
+msgstr "Afficher toutes les pages:"
+
+#: includes/ccchildpages_widget.php:147
+msgid "Overrides the Parent field, shows all top-level pages."
+msgstr "Remplace le champ Parent , montre toutes les pages de haut niveau."
+
+#: includes/ccchildpages_widget.php:150
+msgid "Show Sibling Pages:"
+msgstr "Afficher les pages de la soeur:"
+
+#: includes/ccchildpages_widget.php:152
+msgid "Overrides the Parent and Show All field, shows sibling pages."
+msgstr ""
+"Remplace le champ Parent et Show All, affiche les pages de frères et sœurs."
+
+#: includes/ccchildpages_widget.php:168
+msgid "Parent:"
+msgstr "Parent:"
+
+#: includes/ccchildpages_widget.php:171
+msgid "Depth:"
+msgstr "Profondeur :"
+
+#: includes/ccchildpages_widget.php:175
+msgid ""
+"Pages and sub-pages displayed in hierarchical (indented) form (Default)."
+msgstr ""
+"Pages et sous- pages affichées dans hiérarchique (retrait) forme (par "
+"défaut)."
+
+#: includes/ccchildpages_widget.php:176
+msgid "Pages in sub-pages displayed in flat (no indent) form."
+msgstr ""
+"Pages dans la sous- pages affichées dans l'appartement (pas de retrait) "
+"forme."
+
+#: includes/ccchildpages_widget.php:177
+msgid "Show only top level Pages"
+msgstr "Afficher uniquement les pages de haut niveau"
+
+#: includes/ccchildpages_widget.php:178
+msgid ""
+"Value of 2 (or greater) specifies the depth (or level) to descend in "
+"displaying Pages."
+msgstr ""
+"Valeur de 2 (ou plus) spécifie la profondeur (ou niveau) à descendre dans "
+"l'affichage des pages."
+
+#. Plugin URI of the plugin/theme
+msgid "http://ccchildpages.ccplugins.co.uk/"
+msgstr ""
+
+#. Description of the plugin/theme
+#, fuzzy
+#| msgid "Show only top level Pages"
+msgid "Show links to child pages"
+msgstr "Afficher uniquement les pages de haut niveau"
+
+#. Author of the plugin/theme
+msgid "Caterham Computing"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://caterhamcomputing.net/"
+msgstr ""
+
+#~ msgid "New title"
+#~ msgstr "Nouveau titre"
