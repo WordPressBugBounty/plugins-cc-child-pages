@@ -7,7 +7,7 @@ Author URI: https://caterhamcomputing.net/
 Donate Link: http://ccchildpages.ccplugins.co.uk/donate/
 Requires at least: 4.0
 Requires PHP: 5.6
-Tested up to: 6.1.1
+Tested up to: 6.6.2
 Stable tag: 1.45
 Version: 1.45
 Tags: child pages widget, child pages shortcode, child pages, child page, shortcode, widget, list, sub-pages, subpages, sub-page, subpage, sub page, responsive, child-page, child-pages, childpage, childpages, siblings, sibling pages, posts, custom posts
