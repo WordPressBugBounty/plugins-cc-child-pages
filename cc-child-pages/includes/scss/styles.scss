@@ -1,0 +1,3 @@
+/* Aggregates legacy + modern styles, unique namespaces */
+@use "legacy/styles" as legacyStyles;
+@use "modern/styles" as modernStyles;

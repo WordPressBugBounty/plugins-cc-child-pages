@@ -1,0 +1,253 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "caterhamcomputing/cc-child-pages",
+  "version": "0.1.0",
+  "title": "CC Child Pages",
+  "category": "ccplugins",
+  "icon": "admin-page",
+  "description": "Display a list of child pages with flexible layouts, skins, and query options.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true
+    },
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true
+    }
+  },
+  "attributes": {
+    "id": {
+      "type": "string",
+      "default": ""
+    },
+    "exclude": {
+      "type": "string",
+      "default": ""
+    },
+    "pageIDs": {
+      "type": "string",
+      "default": ""
+    },
+    "orderby": {
+      "type": "string",
+      "default": "menu_order"
+    },
+    "order": {
+      "type": "string",
+      "default": "ASC"
+    },
+    "siblings": {
+      "type": "boolean",
+      "default": false
+    },
+    "showCurrentPage": {
+      "type": "boolean",
+      "default": false
+    },
+    "list": {
+      "type": "string",
+      "default": "false"
+    },
+    "selectSpecificPages": {
+      "type": "boolean",
+      "default": false
+    },
+    "usePagination": {
+      "type": "boolean",
+      "default": false
+    },
+    "postsPerPage": {
+      "type": "integer",
+      "default": 3
+    },
+    "useLimit": {
+      "type": "boolean",
+      "default": false
+    },
+    "ignoreStickyPosts": {
+      "type": "boolean",
+      "default": true
+    },
+    "page": {
+      "type": "integer"
+    },
+    "words": {
+      "type": "integer",
+      "default": 55
+    },
+    "limit": {
+      "type": "string",
+      "default": "3"
+    },
+    "cols": {
+      "type": "string",
+      "default": "3"
+    },
+    "useCCSkin": {
+      "type": "boolean",
+      "default": true
+    },
+    "skin": {
+      "type": "string",
+      "default": "simple"
+    },
+    "itemClass": {
+      "type": "string",
+      "default": ""
+    },
+    "thumbs": {
+      "type": "string",
+      "default": "false"
+    },
+    "linkThumbs": {
+      "type": "boolean",
+      "default": false
+    },
+    "showPageContent": {
+      "type": "boolean",
+      "default": false
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "linkTitles": {
+      "type": "boolean",
+      "default": false
+    },
+    "useCustomTitleClass": {
+      "type": "boolean",
+      "default": false
+    },
+    "customTitleClass": {
+      "type": "string",
+      "default": ""
+    },
+    "showMore": {
+      "type": "boolean",
+      "default": true
+    },
+    "more": {
+      "type": "string",
+      "default": ""
+    },
+    "showWPMore": {
+      "type": "boolean",
+      "default": true
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAuthor": {
+      "type": "boolean",
+      "default": false
+    },
+    "showDateCreated": {
+      "type": "boolean",
+      "default": false
+    },
+    "showDateModified": {
+      "type": "boolean",
+      "default": false
+    },
+    "truncateExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "depth": {
+      "type": "string",
+      "default": "1"
+    },
+    "subpageTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "offset": {
+      "type": "integer",
+      "default": 0
+    },
+    "link": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    },
+    "postStatus": {
+      "type": "string",
+      "default": ""
+    },
+    "useCustomExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "customExcerptField": {
+      "type": "string",
+      "default": ""
+    },
+    "useCustomTitle": {
+      "type": "boolean",
+      "default": false
+    },
+    "customTitleField": {
+      "type": "string",
+      "default": ""
+    },
+    "useCustomMore": {
+      "type": "boolean",
+      "default": false
+    },
+    "customMoreField": {
+      "type": "string",
+      "default": ""
+    },
+    "useCustomLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "customLinkField": {
+      "type": "string",
+      "default": "cc_child_pages_link"
+    },
+    "useCustomLinkTarget": {
+      "type": "boolean",
+      "default": false
+    },
+    "customLinkTargetField": {
+      "type": "string",
+      "default": "cc_child_pages_link_target"
+    },
+    "useCustomThumbs": {
+      "type": "boolean",
+      "default": false
+    },
+    "customThumbsField": {
+      "type": "string",
+      "default": ""
+    },
+    "useLegacyCSS": {
+      "type": "boolean",
+      "default": false
+    },
+    "uiTab": {
+      "type": "string",
+      "default": "design"
+    }
+  },
+  "textdomain": "cc-child-pages",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

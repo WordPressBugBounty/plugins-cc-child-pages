@@ -1,0 +1,364 @@
+// Column definitions
+$columns: (
+	onecol: 1,
+	twocol: 2,
+	threecol: 3,
+	fourcol: 4,
+	fivecol: 5,
+	sixcol: 6,
+);
+
+// Gap between items
+$gap: 1em;
+
+.ccchildpages.ccflex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $gap;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100%;
+	box-sizing: border-box;
+
+	/* NEW: make all cards in a row the same height */
+	align-items: stretch; // NEW
+
+	// Default layout (≥ 761px)
+	@media screen and (min-width: 761px) {
+		@each $name, $count in $columns {
+			&.#{$name} {
+				.ccchildpage {
+					width: calc((100% - (#{$count} - 1) * #{$gap}) / #{$count});
+				}
+			}
+		}
+	}
+
+	// Medium screens: 481px–760px → **cap at 3 columns**
+	// - onecol remains 1
+	// - twocol remains 2
+	// - threecol/fourcol/fivecol/sixcol => 3 columns
+	@media screen and (min-width: 481px) and (max-width: 760px) {
+		&.onecol {
+			.ccchildpage {
+				width: 100%;
+			}
+		}
+		&.twocol {
+			.ccchildpage {
+				width: calc((100% - $gap) / 2);
+			}
+		}
+		&.threecol,
+		&.fourcol,
+		&.fivecol,
+		&.sixcol {
+			.ccchildpage {
+				width: calc((100% - (2 * $gap)) / 3);
+			}
+		}
+	}
+
+	// Small screens: 321px–480px → **cap at 2 columns**
+	// - onecol remains 1
+	// - twocol/threecol/fourcol/fivecol/sixcol => 2 columns
+	@media screen and (min-width: 321px) and (max-width: 480px) {
+		&.onecol {
+			.ccchildpage {
+				width: 100%;
+			}
+		}
+		&.twocol,
+		&.threecol,
+		&.fourcol,
+		&.fivecol,
+		&.sixcol {
+			.ccchildpage {
+				width: calc((100% - $gap) / 2);
+			}
+		}
+	}
+
+	// Extra small: ≤ 320px → single column
+	@media screen and (max-width: 320px) {
+		.ccchildpage {
+			width: 100%;
+		}
+	}
+
+	// Child box
+	.ccchildpage {
+		box-sizing: border-box;
+		padding: 0.75em 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start; // keep content top-aligned
+		gap: 0.75rem; // consistent vertical spacing
+		background: #fff;
+		min-height: 100%;
+
+		/* Read more row: full width, pinned to bottom, right-aligned */
+		.ccpages_more {
+			margin-top: auto; // pushes this row to the bottom
+			box-sizing: border-box;
+			width: 100%;
+			text-align: right; // align the link to the right
+
+			a {
+				display: inline-block; // keeps right-align but allows padding if desired
+				// padding: 0 .25rem;
+			}
+		}
+	}
+
+	/* NEW: prevent very long titles from stretching cards */
+	// .ccchildpage .ccpage_title {
+	// 	margin: 0;
+	// 	line-height: 1.25;
+	// 	min-height: 1.25em; // visual consistency for ~2 lines
+	// 	&,
+	// 	& a {
+	// 		display: -webkit-box;
+	// 		-webkit-line-clamp: 1; // clamp to 2 lines
+	// 		-webkit-box-orient: vertical;
+	// 		overflow: hidden;
+	// 		text-overflow: ellipsis;
+	// 		white-space: normal; /* never force nowrap; allow wrapping before clamp */
+	// 		max-width: 100%;
+	// 	}
+	// }
+
+	// Meta info, links, thumbnails etc. — preserved styles:
+	.cc-meta-info {
+		font-size: 70%;
+	}
+
+	a.ccpage_title_link {
+		text-decoration: inherit !important;
+		color: inherit !important;
+	}
+
+	a.ccpage_linked_thumb img {
+		border: inherit;
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 10px auto;
+		clear: both;
+	}
+
+	.ccpages_excerpt,
+	.ccpages_more {
+		font-size: 85%;
+	}
+
+	.ccpages_excerpt {
+		display: block;
+		margin: 0;
+		padding: 0;
+		/* NEW: let the excerpt absorb spare space so "Read more" stays bottom-aligned */
+		flex: 1 1 auto; // NEW
+	}
+
+	/* Pagination always below the grid */
+	.ccpages_nav {
+		flex: 0 0 100%;
+		width: 100%;
+		order: 999; // ensure it renders after the items
+		margin-top: 1rem; // spacing from last row of cards
+		text-align: center;
+	}
+
+	.ccsubpages {
+		margin-top: 1em;
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+			margin-left: 0;
+			font-size: 90%;
+
+			li {
+				margin: 0.25em 0;
+				position: relative;
+			}
+
+			ul.children {
+				margin-left: 1em;
+				padding-left: 0.5em;
+
+				ul {
+					margin-left: 1em;
+					padding-left: 1em;
+
+					li::before {
+						content: "–"; // deeper nesting
+					}
+				}
+			}
+		}
+	}
+
+	// Thumbnail image
+	.cc-child-pages-thumb {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 10px auto;
+		clear: both;
+	}
+
+	// Nested lists (legacy column list support)
+	&.twocol,
+	&.threecol,
+	&.fourcol,
+	&.fivecol,
+	&.sixcol {
+		ul.ccchildpages_list {
+			li ul {
+				margin-left: 0.5em;
+				padding-left: 0.5em;
+
+				li {
+					display: list-item;
+					width: 100%;
+					float: none;
+				}
+			}
+		}
+	}
+}
+
+// Multi-column behavior for top-level list (>= 761px)
+@media screen and (min-width: 761px) {
+	.ccchildpages.ccflex {
+		@each $name, $count in $columns {
+			// Skip 1 column (no special styling)
+			@if $count > 1 {
+				&.#{$name} {
+					ul.ccchildpages_list {
+						/* Multi-column layout */
+						column-count: $count;
+						column-gap: $gap;
+
+						/* Normal list indentation and bullets */
+						list-style-position: outside;
+						margin: 0;
+						padding-left: 1.25rem;
+
+						/* Keep items intact; don’t split an <li> across columns */
+						li {
+							break-inside: avoid;
+							page-break-inside: avoid;
+							-webkit-column-break-inside: avoid;
+							/* reset any old float-based styles */
+							width: auto;
+							float: none;
+						}
+
+						/* Do NOT multi-column nested lists */
+						li > ul {
+							column-count: auto;
+							column-gap: normal;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Medium screens: 481–760px → **cap lists at 3 columns**
+   - twocol stays 2
+   - threecol/fourcol/fivecol/sixcol become 3 */
+@media screen and (min-width: 481px) and (max-width: 760px) {
+	.ccchildpages.ccflex {
+		&.twocol {
+			ul.ccchildpages_list {
+				column-count: 2;
+				column-gap: $gap;
+
+				li {
+					break-inside: avoid;
+					page-break-inside: avoid;
+					-webkit-column-break-inside: avoid;
+					width: auto;
+					float: none;
+				}
+
+				li > ul {
+					column-count: auto;
+					column-gap: normal;
+				}
+			}
+		}
+
+		&.threecol,
+		&.fourcol,
+		&.fivecol,
+		&.sixcol {
+			ul.ccchildpages_list {
+				column-count: 3;
+				column-gap: $gap;
+
+				li {
+					break-inside: avoid;
+					page-break-inside: avoid;
+					-webkit-column-break-inside: avoid;
+					width: auto;
+					float: none;
+				}
+
+				li > ul {
+					column-count: auto;
+					column-gap: normal;
+				}
+			}
+		}
+	}
+}
+
+/* Small screens: 321–480px → **cap lists at 2 columns** */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+	.ccchildpages.ccflex {
+		&.twocol,
+		&.threecol,
+		&.fourcol,
+		&.fivecol,
+		&.sixcol {
+			ul.ccchildpages_list {
+				column-count: 2; // effectively two-column list
+				column-gap: $gap;
+
+				li {
+					break-inside: avoid;
+					page-break-inside: avoid;
+					-webkit-column-break-inside: avoid;
+					width: auto;
+					float: none;
+				}
+
+				li > ul {
+					column-count: auto;
+					column-gap: normal;
+				}
+			}
+		}
+	}
+}
+
+/* Extra small: ≤ 320px → **single-column list** */
+@media screen and (max-width: 320px) {
+	.ccchildpages.ccflex {
+		&.twocol,
+		&.threecol,
+		&.fourcol,
+		&.fivecol,
+		&.sixcol {
+			ul.ccchildpages_list {
+				column-count: 1; // normal list
+				column-gap: normal;
+			}
+		}
+	}
+}

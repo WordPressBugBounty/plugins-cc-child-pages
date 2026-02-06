@@ -1,0 +1,210 @@
+/*
+ * Skins (legacy-only: applies when top-level has .ccchildpages.cclegacy)
+ */
+$more-link-color-default: blue;
+
+@mixin gradient-background($start, $end) {
+	$startbg: var(--ccpro-bg-color, $start);
+	$endbg: var(--ccpro-bg-color, $end);
+
+	background: $start; // Fallback
+	background: $startbg;
+	background: -moz-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, $startbg),
+		color-stop(100%, $endbg)
+	);
+	background: -webkit-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: -o-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: -ms-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: linear-gradient(to bottom, $startbg 0%, $endbg 100%);
+}
+
+/* Simple skin */
+.ccchildpages.cclegacy.simple .ccchildpage {
+	@include gradient-background(#eee, #eee);
+	/* W3C */
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: #333;
+}
+
+.ccchildpages.cclegacy.simple .ccchildpage .ccpage_title {
+	color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.cclegacy.simple .ccchildpage .cc-meta-info {
+	color: var(--ccpro-meta-color, inherit);
+
+	a {
+		color: var(--ccpro-meta-color, inherit);
+	}
+}
+.ccchildpages.cclegacy.simple .ccchildpage .ccpages_excerpt {
+	color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.cclegacy.simple .ccchildpage a {
+	color: var(--ccpro-more-link-color, #{$more-link-color-default});
+	text-decoration: underline;
+}
+.ccchildpages.cclegacy.simple .ccpages_more {
+	text-align: right;
+	font-style: italic;
+}
+.ccchildpages.cclegacy.simple .ccpages_more a {
+	text-decoration: none;
+}
+.ccchildpages.cclegacy.simple .ccsubpages {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border: 2px solid var(--ccpro-subpages-border-color, #999);
+	padding: 0.5em;
+}
+/* End of Simple skin */
+
+/* Red skin */
+.ccchildpages.cclegacy.ccred .ccchildpage {
+	@include gradient-background(#fee, #fee);
+	/* W3C */
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: #333;
+	background-color: var(--ccpro-bg-color); // Only set if CSS variable exists
+}
+.ccchildpages.cclegacy.ccred .ccchildpage .ccpage_title {
+	color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.cclegacy.ccred .ccchildpage .cc-meta-info {
+	color: var(--ccpro-meta-color, inherit);
+
+	a {
+		color: var(--ccpro-meta-color, inherit);
+	}
+}
+.ccchildpages.cclegacy.ccred .ccchildpage .ccpages_excerpt {
+	color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.cclegacy.ccred .ccchildpage a {
+	color: var(--ccpro-more-link-color, #{$more-link-color-default});
+	text-decoration: underline;
+}
+.ccchildpages.cclegacy.ccred .ccpages_more {
+	text-align: right;
+	font-style: italic;
+}
+.ccchildpages.cclegacy.ccred .ccpages_more a {
+	text-decoration: none;
+}
+.ccchildpages.cclegacy.ccred .ccsubpages {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	//border: 2px solid #f99;
+	border: 2px solid var(--ccpro-subpages-border-color, #f99);
+	padding: 0.5em;
+}
+/* End of Red skin */
+
+/* Blue skin */
+.ccchildpages.cclegacy.ccblue .ccchildpage {
+	@include gradient-background(#eef, #eef);
+	/* W3C */
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: #333;
+	background-color: var(--ccpro-bg-color); // Only set if CSS variable exists
+}
+.ccchildpages.cclegacy.ccblue .ccchildpage .ccpage_title {
+	color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.cclegacy.ccblue .ccchildpage .cc-meta-info {
+	color: var(--ccpro-meta-color, inherit);
+
+	a {
+		color: var(--ccpro-meta-color, inherit);
+	}
+}
+.ccchildpages.cclegacy.ccblue .ccchildpage .ccpages_excerpt {
+	color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.cclegacy.ccblue .ccchildpage a {
+	color: var(--ccpro-more-link-color, #{$more-link-color-default});
+	text-decoration: underline;
+}
+.ccchildpages.cclegacy.ccblue .ccpages_more {
+	text-align: right;
+	font-style: italic;
+}
+.ccchildpages.cclegacy.ccblue .ccpages_more a {
+	text-decoration: none;
+}
+.ccchildpages.cclegacy.ccblue .ccsubpages {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	// border: 2px solid #99f;
+	border: 2px solid var(--ccpro-subpages-border-color, #99f);
+	padding: 0.5em;
+}
+/* End of Blue skin */
+
+/* Green skin */
+.ccchildpages.cclegacy.ccgreen .ccchildpage {
+	background: #efe;
+	@include gradient-background(#efe, #efe);
+	/* W3C */
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: #333;
+	background-color: var(--ccpro-bg-color); // Only set if CSS variable exists
+}
+.ccchildpages.cclegacy.ccgreen .ccchildpage .ccpage_title {
+	color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.cclegacy.ccgreen .ccchildpage .cc-meta-info {
+	color: var(--ccpro-meta-color, inherit);
+
+	a {
+		color: var(--ccpro-meta-color, inherit);
+	}
+}
+.ccchildpages.cclegacy.ccgreen .ccchildpage .ccpages_excerpt {
+	color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.cclegacy.ccgreen .ccchildpage a {
+	color: var(--ccpro-more-link-color, #{$more-link-color-default});
+	text-decoration: underline;
+}
+.ccchildpages.cclegacy.ccgreen .ccpages_more {
+	text-align: right;
+	font-style: italic;
+}
+.ccchildpages.cclegacy.ccgreen .ccpages_more a {
+	text-decoration: none;
+}
+.ccchildpages.cclegacy.ccgreen .ccsubpages {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	// border: 2px solid #9f9;
+	border: 2px solid var(--ccpro-subpages-border-color, #9f9);
+	padding: 0.5em;
+}
+/* End of Green skin */
+
+// Overrides for inheriting text colour in block
+.wp-block-caterhamcomputing-cc-child-pages {
+	.ccchildpages.cclegacy.simple .ccchildpage,
+	.ccchildpages.cclegacy.ccred .ccchildpage,
+	.ccchildpages.cclegacy.ccblue .ccchildpage,
+	.ccchildpages.cclegacy.ccgreen .ccchildpage {
+		color: inherit;
+	}
+}

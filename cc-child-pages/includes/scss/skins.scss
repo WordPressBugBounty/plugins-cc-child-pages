@@ -1,0 +1,3 @@
+/* Aggregates legacy + modern skins, unique namespaces */
+@use "legacy/skins" as legacySkins;
+@use "modern/skins" as modernSkins;

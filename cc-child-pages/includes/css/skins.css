@@ -1,164 +1,666 @@
+/* Aggregates legacy + modern skins, unique namespaces */
 /*
- * Skins
+ * Skins (legacy-only: applies when top-level has .ccchildpages.cclegacy)
  */
 /* Simple skin */
-.simple .ccchildpage {
+.ccchildpages.cclegacy.simple .ccchildpage {
   background: #eee;
-  /* Fallback ... */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: var(--ccpro-bg-color, #eee);
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, #eee) 0%, var(--ccpro-bg-color, #eee) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, #eee)), color-stop(100%, var(--ccpro-bg-color, #eee)));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, #eee) 0%, var(--ccpro-bg-color, #eee) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, #eee) 0%, var(--ccpro-bg-color, #eee) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, #eee) 0%, var(--ccpro-bg-color, #eee) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, #eee) 0%, var(--ccpro-bg-color, #eee) 100%);
   /* W3C */
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   color: #333;
 }
-.simple .ccchildpage a {
-  color: blue;
+
+.ccchildpages.cclegacy.simple .ccchildpage .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+
+.ccchildpages.cclegacy.simple .ccchildpage .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.cclegacy.simple .ccchildpage .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+
+.ccchildpages.cclegacy.simple .ccchildpage .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+
+.ccchildpages.cclegacy.simple .ccchildpage a {
+  color: var(--ccpro-more-link-color, blue);
   text-decoration: underline;
 }
-.simple .ccpages_more {
+
+.ccchildpages.cclegacy.simple .ccpages_more {
   text-align: right;
   font-style: italic;
 }
-.simple .ccpages_more a {
+
+.ccchildpages.cclegacy.simple .ccpages_more a {
   text-decoration: none;
 }
 
-.simple .ccsubpages {
+.ccchildpages.cclegacy.simple .ccsubpages {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  border: 2px solid #999;
-  padding: .5em;
+  border: 2px solid var(--ccpro-subpages-border-color, #999);
+  padding: 0.5em;
 }
+
 /* End of Simple skin */
 /* Red skin */
-.ccred .ccchildpage {
+.ccchildpages.cclegacy.ccred .ccchildpage {
   background: #fee;
-  /* Fallback ... */
-  background: -moz-linear-gradient(top, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.1) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 0.3)), color-stop(100%, rgba(255, 0, 0, 0.1)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.1) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.1) 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.1) 100%);
+  background: var(--ccpro-bg-color, #fee);
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, #fee) 0%, var(--ccpro-bg-color, #fee) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, #fee)), color-stop(100%, var(--ccpro-bg-color, #fee)));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, #fee) 0%, var(--ccpro-bg-color, #fee) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, #fee) 0%, var(--ccpro-bg-color, #fee) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, #fee) 0%, var(--ccpro-bg-color, #fee) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, #fee) 0%, var(--ccpro-bg-color, #fee) 100%);
   /* W3C */
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   color: #333;
+  background-color: var(--ccpro-bg-color);
 }
-.ccred .ccchildpage a {
-  color: blue;
+
+.ccchildpages.cclegacy.ccred .ccchildpage .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccred .ccchildpage .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.cclegacy.ccred .ccchildpage .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccred .ccchildpage .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccred .ccchildpage a {
+  color: var(--ccpro-more-link-color, blue);
   text-decoration: underline;
 }
-.ccred .ccpages_more {
+
+.ccchildpages.cclegacy.ccred .ccpages_more {
   text-align: right;
   font-style: italic;
 }
-.ccred .ccpages_more a {
+
+.ccchildpages.cclegacy.ccred .ccpages_more a {
   text-decoration: none;
 }
-.ccred .ccsubpages {
+
+.ccchildpages.cclegacy.ccred .ccsubpages {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  border: 2px solid #f99;
-  padding: .5em;
+  border: 2px solid var(--ccpro-subpages-border-color, #f99);
+  padding: 0.5em;
 }
+
 /* End of Red skin */
 /* Blue skin */
-.ccblue .ccchildpage {
+.ccchildpages.cclegacy.ccblue .ccchildpage {
   background: #eef;
-  /* Fallback ... */
-  background: -moz-linear-gradient(top, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0.1) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 255, 0.3)), color-stop(100%, rgba(0, 0, 255, 0.1)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0.1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0.1) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0.1) 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0.1) 100%);
+  background: var(--ccpro-bg-color, #eef);
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, #eef) 0%, var(--ccpro-bg-color, #eef) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, #eef)), color-stop(100%, var(--ccpro-bg-color, #eef)));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, #eef) 0%, var(--ccpro-bg-color, #eef) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, #eef) 0%, var(--ccpro-bg-color, #eef) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, #eef) 0%, var(--ccpro-bg-color, #eef) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, #eef) 0%, var(--ccpro-bg-color, #eef) 100%);
   /* W3C */
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   color: #333;
+  background-color: var(--ccpro-bg-color);
 }
-.ccblue .ccchildpage a {
-  color: blue;
+
+.ccchildpages.cclegacy.ccblue .ccchildpage .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccblue .ccchildpage .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.cclegacy.ccblue .ccchildpage .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccblue .ccchildpage .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccblue .ccchildpage a {
+  color: var(--ccpro-more-link-color, blue);
   text-decoration: underline;
 }
-.ccblue .ccpages_more {
+
+.ccchildpages.cclegacy.ccblue .ccpages_more {
   text-align: right;
   font-style: italic;
 }
-.ccblue .ccpages_more a {
+
+.ccchildpages.cclegacy.ccblue .ccpages_more a {
   text-decoration: none;
 }
-.ccblue .ccsubpages {
+
+.ccchildpages.cclegacy.ccblue .ccsubpages {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  border: 2px solid #99f;
-  padding: .5em;
+  border: 2px solid var(--ccpro-subpages-border-color, #99f);
+  padding: 0.5em;
 }
+
 /* End of Blue skin */
 /* Green skin */
-.ccgreen .ccchildpage {
+.ccchildpages.cclegacy.ccgreen .ccchildpage {
   background: #efe;
-  /* Fallback ... */
-  background: -moz-linear-gradient(top, rgba(0, 255, 0, 0.3) 0%, rgba(0, 255, 0, 0.1) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 255, 0, 0.3)), color-stop(100%, rgba(0, 255, 0, 0.1)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0, 255, 0, 0.3) 0%, rgba(0, 255, 0, 0.1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0, 255, 0, 0.3) 0%, rgba(0, 255, 0, 0.1) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0, 255, 0, 0.3) 0%, rgba(0, 255, 0, 0.1) 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 255, 0, 0.3) 0%, rgba(0, 255, 0, 0.1) 100%);
+  background: #efe;
+  background: var(--ccpro-bg-color, #efe);
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, #efe) 0%, var(--ccpro-bg-color, #efe) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, #efe)), color-stop(100%, var(--ccpro-bg-color, #efe)));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, #efe) 0%, var(--ccpro-bg-color, #efe) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, #efe) 0%, var(--ccpro-bg-color, #efe) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, #efe) 0%, var(--ccpro-bg-color, #efe) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, #efe) 0%, var(--ccpro-bg-color, #efe) 100%);
   /* W3C */
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   color: #333;
+  background-color: var(--ccpro-bg-color);
 }
-.ccgreen .ccchildpage a {
-  color: blue;
+
+.ccchildpages.cclegacy.ccgreen .ccchildpage .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccgreen .ccchildpage .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.cclegacy.ccgreen .ccchildpage .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccgreen .ccchildpage .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+
+.ccchildpages.cclegacy.ccgreen .ccchildpage a {
+  color: var(--ccpro-more-link-color, blue);
   text-decoration: underline;
 }
-.ccgreen .ccpages_more {
+
+.ccchildpages.cclegacy.ccgreen .ccpages_more {
   text-align: right;
   font-style: italic;
 }
-.ccgreen .ccpages_more a {
+
+.ccchildpages.cclegacy.ccgreen .ccpages_more a {
   text-decoration: none;
 }
-.ccgreen .ccsubpages {
+
+.ccchildpages.cclegacy.ccgreen .ccsubpages {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  border: 2px solid #9f9;
-  padding: .5em;
+  border: 2px solid var(--ccpro-subpages-border-color, #9f9);
+  padding: 0.5em;
 }
+
 /* End of Green skin */
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.cclegacy.simple .ccchildpage,
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.cclegacy.ccred .ccchildpage,
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.cclegacy.ccblue .ccchildpage,
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.cclegacy.ccgreen .ccchildpage {
+  color: inherit;
+}
+
+.ccchildpages.ccflex.simple .ccchildpage {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.3);
+  background: var(--ccpro-bg-color, rgba(0, 0, 0, 0.3));
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.1)) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.3))), color-stop(100%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.1))));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.1)) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.1)) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.1)) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, rgba(0, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 0, 0.1)) 100%);
+  border-radius: 20px;
+  color: #333;
+}
+.ccchildpages.ccflex.simple .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.ccflex.simple .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.simple .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.simple .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.ccflex.simple .ccchildpage a {
+  color: inherit;
+  text-decoration: underline;
+}
+.ccchildpages.ccflex.simple .ccchildpage a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.simple .ccpages_excerpt {
+  padding: 1em;
+}
+.ccchildpages.ccflex.simple .ccpages_more {
+  margin-top: auto;
+  text-align: right;
+  font-style: italic;
+  padding: 0.75em 0 0.75em 1em;
+}
+.ccchildpages.ccflex.simple .ccpages_more a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: none;
+}
+.ccchildpages.ccflex.simple .ccpages_more a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.simple .ccsubpages {
+  border-radius: 20px;
+  border: 2px solid var(--ccpro-subpages-border-color, #999);
+  padding: 0.5em;
+}
+.ccchildpages.ccflex.simple .ccsubpages a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: underline;
+}
+
+.ccchildpages.ccflex.ccred .ccchildpage {
+  background: #fee;
+  background: rgba(255, 0, 0, 0.3);
+  background: var(--ccpro-bg-color, rgba(255, 0, 0, 0.3));
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, rgba(255, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.1)) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.3))), color-stop(100%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.1))));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, rgba(255, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.1)) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, rgba(255, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.1)) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, rgba(255, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.1)) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, rgba(255, 0, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(255, 0, 0, 0.1)) 100%);
+  border-radius: 20px;
+  color: #333;
+}
+.ccchildpages.ccflex.ccred .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.ccflex.ccred .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.ccred .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.ccred .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.ccflex.ccred .ccchildpage a {
+  color: inherit;
+  text-decoration: underline;
+}
+.ccchildpages.ccflex.ccred .ccchildpage a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.ccred .ccpages_excerpt {
+  padding: 1em;
+}
+.ccchildpages.ccflex.ccred .ccpages_more {
+  margin-top: auto;
+  text-align: right;
+  font-style: italic;
+  padding: 0.75em 0 0.75em 1em;
+}
+.ccchildpages.ccflex.ccred .ccpages_more a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: none;
+}
+.ccchildpages.ccflex.ccred .ccpages_more a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.ccred .ccsubpages {
+  border-radius: 20px;
+  border: 2px solid var(--ccpro-subpages-border-color, #f99);
+  padding: 0.5em;
+}
+.ccchildpages.ccflex.ccred .ccsubpages a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: underline;
+}
+
+.ccchildpages.ccflex.ccblue .ccchildpage {
+  background: #eef;
+  background: rgba(0, 0, 255, 0.3);
+  background: var(--ccpro-bg-color, rgba(0, 0, 255, 0.3));
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 255, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.1)) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.3))), color-stop(100%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.1))));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 255, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.1)) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 255, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.1)) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 0, 255, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.1)) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, rgba(0, 0, 255, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 0, 255, 0.1)) 100%);
+  border-radius: 20px;
+  color: #333;
+}
+.ccchildpages.ccflex.ccblue .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.ccflex.ccblue .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.ccblue .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.ccblue .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.ccflex.ccblue .ccchildpage a {
+  color: inherit;
+  text-decoration: underline;
+}
+.ccchildpages.ccflex.ccblue .ccchildpage a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.ccblue .ccpages_excerpt {
+  padding: 1em;
+}
+.ccchildpages.ccflex.ccblue .ccpages_more {
+  margin-top: auto;
+  text-align: right;
+  font-style: italic;
+  padding: 0.75em 0 0.75em 1em;
+}
+.ccchildpages.ccflex.ccblue .ccpages_more a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: none;
+}
+.ccchildpages.ccflex.ccblue .ccpages_more a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.ccblue .ccsubpages {
+  border-radius: 20px;
+  border: 2px solid var(--ccpro-subpages-border-color, #99f);
+  padding: 0.5em;
+}
+.ccchildpages.ccflex.ccblue .ccsubpages a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: underline;
+}
+
+.ccchildpages.ccflex.ccgreen .ccchildpage {
+  background: #efe;
+  background: rgba(0, 255, 0, 0.3);
+  background: var(--ccpro-bg-color, rgba(0, 255, 0, 0.3));
+  background: -moz-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 255, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.1)) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.3))), color-stop(100%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.1))));
+  background: -webkit-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 255, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.1)) 100%);
+  background: -o-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 255, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.1)) 100%);
+  background: -ms-linear-gradient(top, var(--ccpro-bg-color, rgba(0, 255, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.1)) 100%);
+  background: linear-gradient(to bottom, var(--ccpro-bg-color, rgba(0, 255, 0, 0.3)) 0%, var(--ccpro-bg-color, rgba(0, 255, 0, 0.1)) 100%);
+  border-radius: 20px;
+  color: #333;
+}
+.ccchildpages.ccflex.ccgreen .ccpage_title {
+  color: var(--ccpro-title-color, inherit);
+}
+.ccchildpages.ccflex.ccgreen .cc-meta-info {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.ccgreen .cc-meta-info a {
+  color: var(--ccpro-meta-color, inherit);
+}
+.ccchildpages.ccflex.ccgreen .ccpages_excerpt {
+  color: var(--ccpro-excerpt-color, inherit);
+}
+.ccchildpages.ccflex.ccgreen .ccchildpage a {
+  color: inherit;
+  text-decoration: underline;
+}
+.ccchildpages.ccflex.ccgreen .ccchildpage a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.ccgreen .ccpages_excerpt {
+  padding: 1em;
+}
+.ccchildpages.ccflex.ccgreen .ccpages_more {
+  margin-top: auto;
+  text-align: right;
+  font-style: italic;
+  padding: 0.75em 0 0.75em 1em;
+}
+.ccchildpages.ccflex.ccgreen .ccpages_more a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: none;
+}
+.ccchildpages.ccflex.ccgreen .ccpages_more a:hover {
+  color: var(--ccpro-more-link-color, inherit);
+}
+.ccchildpages.ccflex.ccgreen .ccsubpages {
+  border-radius: 20px;
+  border: 2px solid var(--ccpro-subpages-border-color, #9f9);
+  padding: 0.5em;
+}
+.ccchildpages.ccflex.ccgreen .ccsubpages a {
+  color: var(--ccpro-more-link-color, blue);
+  text-decoration: underline;
+}
+
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.ccflex.simple .ccchildpage,
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.ccflex.ccred .ccchildpage,
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.ccflex.ccblue .ccchildpage,
+.wp-block-caterhamcomputing-cc-child-pages .ccchildpages.ccflex.ccgreen .ccchildpage {
+  color: inherit;
+}
+
+.ccchildpages.ccflex.ccsleek .ccchildpage {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .cc-child-pages-thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  padding: 1em 1em 0.25em;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .cc-meta-info {
+  font-size: 0.8rem;
+  color: #888;
+  padding: 0 1em 0.5em;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccpages_excerpt {
+  padding: 0 1em;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccsubpages {
+  margin: 1em;
+  font-size: 0.85rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.5em;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccsubpages ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccsubpages ul li {
+  margin-bottom: 0.25em;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccsubpages ul li a {
+  text-decoration: none;
+  color: #0073e6;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccsubpages ul li a:hover {
+  text-decoration: underline;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccsubpages ul li ul {
+  margin-left: 0.75em;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccpages_more {
+  margin-top: auto;
+  padding: 0.75em 1em;
+  background: #f7f9fa;
+  text-align: right;
+  border-top: 1px solid #eee;
+  font-weight: 500;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccpages_more a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: 500;
+}
+.ccchildpages.ccflex.ccsleek .ccchildpage .ccpages_more a:hover {
+  color: #005bb5;
+  text-decoration: underline;
+}
+
+.ccchildpages.ccflex.ccbold .ccchildpage {
+  position: relative;
+  background: #fafafa;
+  color: #1a1a1a;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 50% 100%, 0 93%);
+}
+.ccchildpages.ccflex.ccbold .ccchildpage:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .cc-child-pages-thumb {
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(10%) contrast(1.05);
+  border-bottom: 4px solid #000;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpage_title {
+  padding: 1rem 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  margin: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpage_title,
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpage_title a {
+  background: #000;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage:has(.cc-child-pages-thumb) .ccpage_title {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  z-index: 2;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage:has(.cc-child-pages-thumb) .cc-meta-info {
+  margin-top: 5rem;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .cc-meta-info {
+  padding: 0 1.25rem 0.25rem;
+  font-size: 0.8rem;
+  color: #777;
+  font-style: italic;
+  border-bottom: 1px dashed #ccc;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpages_excerpt {
+  padding: 0.5rem 1.25rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages {
+  margin: 0 1.25rem 1rem;
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  border-left: 4px solid #000;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages .ccsubpages_title {
+  margin: 0 1.25rem 1rem;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages ul li {
+  margin: 0.25rem 0;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages ul li a {
+  background: #000;
+  color: #fff;
+  padding: 0.2em 0.6em;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages ul li a:hover {
+  background: #333;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccsubpages ul li ul {
+  margin-left: 1rem;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpages_more {
+  margin-top: auto;
+  padding: 1rem 1.25rem;
+  background: #000;
+  color: #fff;
+  text-align: right;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpages_more a {
+  color: #fff;
+  text-decoration: none;
+}
+.ccchildpages.ccflex.ccbold .ccchildpage .ccpages_more a:hover {
+  text-decoration: underline;
+}

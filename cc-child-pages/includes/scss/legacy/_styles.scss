@@ -1,0 +1,383 @@
+.ccchildpages.cclegacy {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 !important;
+	padding: 0 !important;
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+.ccchildpages.cclegacy .cc-meta-info {
+	font-size: 70%;
+}
+
+.ccchildpages.cclegacy a.ccpage_title_link {
+	text-decoration: inherit !important;
+	color: inherit !important;
+}
+
+.ccchildpages.cclegacy a.ccpage_linked_thumb img {
+	border: inherit;
+}
+
+.ccchildpages.cclegacy .ccchildpage {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 1em 1%;
+	padding: 0.75em 2%;
+	display: block;
+	float: left;
+}
+
+.ccchildpages.cclegacy .ccpages_excerpt,
+.ccchildpages.cclegacy .ccpages_more {
+	font-size: 85%;
+}
+
+.ccchildpages.cclegacy .ccpages_excerpt {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.ccchildpages.cclegacy .ccfirst {
+	clear: both;
+}
+
+.ccchildpages.cclegacy .cclast {
+	margin: 1em 1% 1em 0;
+	float: right;
+}
+
+.ccchildpages.cclegacy.onecol .ccchildpage {
+	width: 98%;
+}
+
+.ccchildpages.cclegacy.twocol .ccchildpage {
+	width: 48%;
+}
+
+.ccchildpages.cclegacy.threecol .ccchildpage {
+	width: 31.333%;
+}
+
+.ccchildpages.cclegacy.fourcol .ccchildpage {
+	width: 23%;
+}
+
+.ccchildpages.cclegacy.fivecol .ccchildpage {
+	width: 18%;
+}
+
+.ccchildpages.cclegacy.sixcol .ccchildpage {
+	width: 14.666666667%;
+}
+
+/*
+ * Sub-pages ...
+ */
+.ccchildpages.cclegacy .ccsubpages {
+	margin-top: 1em;
+}
+
+.ccchildpages.cclegacy .ccsubpages ul {
+	list-style: none;
+}
+
+/*
+ * Navigation links
+ */
+.ccchildpages.cclegacy .ccpages_nav {
+	display: block;
+	clear: both;
+	text-align: center;
+}
+
+/*
+ * End of Navigation links
+ */
+
+/*
+ * Thumbnails ...
+ */
+.ccchildpages.cclegacy .cc-child-pages-thumb {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 10px auto;
+	clear: both;
+}
+
+/*
+ * End of Thumbnails
+ */
+/*
+ * Rules for nested lists ..
+ */
+.ccchildpages.cclegacy.twocol ul.ccchildpages_list li ul,
+.ccchildpages.cclegacy.threecol ul.ccchildpages_list li ul,
+.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li ul,
+.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li ul,
+.ccchildpages.cclegacy.fsixcol ul.ccchildpages_list li ul {
+	margin-left: 0.5em;
+	padding-left: 0.5em;
+}
+
+.ccchildpages.cclegacy.twocol ul.ccchildpages_list li ul li,
+.ccchildpages.cclegacy.threecol ul.ccchildpages_list li ul li,
+.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li ul li,
+.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li ul li,
+.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li ul li {
+	display: list-item;
+	width: 100%;
+	float: none;
+}
+
+/*
+ * Media Queries
+ */
+
+@media screen and (min-width: 761px) {
+	/*
+   * List items
+   */
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li {
+		margin-left: 0;
+		margin-right: 2%;
+		vertical-align: top;
+	}
+
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li {
+		width: 48%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li:nth-child(2n + 3),
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li:nth-child(3n + 4),
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li:nth-child(4n + 5),
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li:nth-child(5n + 6),
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li:nth-child(6n + 7) {
+		clear: both;
+	}
+
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li {
+		width: 31.333%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li {
+		width: 23%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+	/* Undo rules we are not interested in for lower resolutions */
+	.ccchildpages.cclegacy.fourcol .cclast,
+	.ccchildpages.cclegacy.fivecol .cclast,
+	.ccchildpages.cclegacy.sixcol .cclast {
+		margin: 1em 1%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.fourcol .ccfirst,
+	.ccchildpages.cclegacy.fivecol .ccfirst,
+	.ccchildpages.cclegacy.sixcol .ccfirst {
+		clear: none;
+	}
+
+	/* Cards: enforce a simple 3-column float grid */
+	.ccchildpages.cclegacy.fourcol .ccchildpage,
+	.ccchildpages.cclegacy.fivecol .ccchildpage,
+	.ccchildpages.cclegacy.sixcol .ccchildpage {
+		width: 31.333%;
+		float: left;
+		margin: 1em 1%;
+	}
+
+	/* Start each row cleanly: items 1,4,7,... */
+	.ccchildpages.cclegacy.fourcol .ccchildpage:nth-child(3n + 1),
+	.ccchildpages.cclegacy.fivecol .ccchildpage:nth-child(3n + 1),
+	.ccchildpages.cclegacy.sixcol .ccchildpage:nth-child(3n + 1) {
+		clear: both;
+	}
+
+	/* Ensure every 3rd item doesn't float right (undo previous pattern) */
+	.ccchildpages.cclegacy.fourcol .ccchildpage:nth-child(3n),
+	.ccchildpages.cclegacy.fivecol .ccchildpage:nth-child(3n),
+	.ccchildpages.cclegacy.sixcol .ccchildpage:nth-child(3n) {
+		float: left;
+		margin: 1em 1%;
+	}
+
+	/*
+   * List items (unchanged from your original)
+   */
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li {
+		margin-left: 0;
+		margin-right: 5%;
+		vertical-align: top;
+	}
+
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li {
+		width: 45%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li:nth-child(2n + 3),
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li:nth-child(3n + 4),
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li:nth-child(3n + 4),
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li:nth-child(3n + 4),
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li:nth-child(3n + 4) {
+		clear: both;
+	}
+
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li {
+		width: 28.333%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+	/* Undo rules we are not interested in for lower resolutions */
+	.ccchildpages.cclegacy.threecol .cclast,
+	.ccchildpages.cclegacy.fourcol .cclast,
+	.ccchildpages.cclegacy.fivecol .cclast,
+	.ccchildpages.cclegacy.sixcol .cclast {
+		margin: 1em 1% 1em 1%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.threecol .ccfirst,
+	.ccchildpages.cclegacy.fourcol .ccfirst,
+	.ccchildpages.cclegacy.fivecol .ccfirst,
+	.ccchildpages.cclegacy.sixcol .ccfirst {
+		clear: none;
+	}
+
+	/* Add new rules for lower resolutions */
+	.ccchildpages.cclegacy.threecol .ccchildpage,
+	.ccchildpages.cclegacy.fourcol .ccchildpage,
+	.ccchildpages.cclegacy.fivecol .ccchildpage,
+	.ccchildpages.cclegacy.sixcol .ccchildpage {
+		width: 48%;
+	}
+
+	.ccchildpages.cclegacy.threecol .ccchildpage:nth-child(2n),
+	.ccchildpages.cclegacy.fourcol .ccchildpage:nth-child(2n),
+	.ccchildpages.cclegacy.fivecol .ccchildpage:nth-child(2n),
+	.ccchildpages.cclegacy.sixcol .ccchildpage:nth-child(2n) {
+		margin: 1em 0 1em 1%;
+		float: right;
+	}
+
+	.ccchildpages.cclegacy.threecol .ccchildpage:nth-child(2n + 1),
+	.ccchildpages.cclegacy.fourcol .ccchildpage:nth-child(2n + 1),
+	.ccchildpages.cclegacy.fivecol .ccchildpage:nth-child(2n + 1),
+	.ccchildpages.cclegacy.sixcol .ccchildpage:nth-child(2n + 1) {
+		clear: both;
+	}
+
+	/*
+   * List items
+   */
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li {
+		margin-left: 0;
+		margin-right: 7%;
+		vertical-align: top;
+	}
+
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li,
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li {
+		width: 43%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.twocol ul.ccchildpages_list li:nth-child(2n + 3),
+	.ccchildpages.cclegacy.threecol ul.ccchildpages_list li:nth-child(2n + 3),
+	.ccchildpages.cclegacy.fourcol ul.ccchildpages_list li:nth-child(2n + 3),
+	.ccchildpages.cclegacy.fivecol ul.ccchildpages_list li:nth-child(2n + 3),
+	.ccchildpages.cclegacy.sixcol ul.ccchildpages_list li:nth-child(2n + 3) {
+		clear: both;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	/* Undo rules we are not interested in for lower resolutions */
+	.ccchildpages.cclegacy.twocol .cclast,
+	.ccchildpages.cclegacy.threecol .cclast,
+	.ccchildpages.cclegacy.fourcol .cclast,
+	.ccchildpages.cclegacy.fivecol .cclast,
+	.ccchildpages.cclegacy.sixcol .cclast {
+		margin: 1em 1%;
+		float: left;
+	}
+
+	.ccchildpages.cclegacy.twocol .ccfirst,
+	.ccchildpages.cclegacy.threecol .ccfirst,
+	.ccchildpages.cclegacy.fourcol .ccfirst,
+	.ccchildpages.cclegacy.fivecol .ccfirst,
+	.ccchildpages.cclegacy.sixcol .ccfirst {
+		clear: none;
+	}
+
+	/* Add new rules for lower resolutions */
+	.ccchildpages.cclegacy.twocol .ccchildpage,
+	.ccchildpages.cclegacy.threecol .ccchildpage,
+	.ccchildpages.cclegacy.fourcol .ccchildpage,
+	.ccchildpages.cclegacy.fivecol .ccchildpage,
+	.ccchildpages.cclegacy.sixcol .ccchildpage {
+		width: 98%;
+		float: none;
+	}
+}
+
+/*
+ * Clearfix hack ... ccclearfix, to avoid upsetting other plugins and themes
+ */
+.ccchildpages.cclegacy.ccclearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.ccchildpages.cclegacy .ccclearfix {
+	display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .ccchildpages.cclegacy.ccclearfix {
+	height: 1%;
+}
+
+.ccchildpages.cclegacy.ccclearfix {
+	display: block;
+}
+
+/* close commented backslash hack */

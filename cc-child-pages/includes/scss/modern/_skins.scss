@@ -1,0 +1,404 @@
+@use "sass:map";
+
+// -------------------------------------------
+// Base skin configuration
+// -------------------------------------------
+$skins: (
+	simple: (
+		base-color: #eee,
+		gradient: rgba(0, 0, 0, 0.3),
+		gradient-light: rgba(0, 0, 0, 0.1),
+		border: #999,
+		color: #333,
+	),
+	ccred: (
+		base-color: #fee,
+		gradient: rgba(255, 0, 0, 0.3),
+		gradient-light: rgba(255, 0, 0, 0.1),
+		border: #f99,
+		color: #333,
+	),
+	ccblue: (
+		base-color: #eef,
+		gradient: rgba(0, 0, 255, 0.3),
+		gradient-light: rgba(0, 0, 255, 0.1),
+		border: #99f,
+		color: #333,
+	),
+	ccgreen: (
+		base-color: #efe,
+		gradient: rgba(0, 255, 0, 0.3),
+		gradient-light: rgba(0, 255, 0, 0.1),
+		border: #9f9,
+		color: #333,
+	),
+);
+
+$more-link-color-default: blue;
+$title-color-default: inherit;
+$excerpt-color-default: inherit;
+
+// -------------------------------------------
+// Mixin: cross-browser gradient background
+// -------------------------------------------
+@mixin gradient-background($start, $end) {
+	background: $start; // Fallback
+	$startbg: var(--ccpro-bg-color, $start);
+	$endbg: var(--ccpro-bg-color, $end);
+
+	background: $startbg; // Fallback
+	background: -moz-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, $startbg),
+		color-stop(100%, $endbg)
+	);
+	background: -webkit-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: -o-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: -ms-linear-gradient(top, $startbg 0%, $endbg 100%);
+	background: linear-gradient(to bottom, $startbg 0%, $endbg 100%);
+}
+
+// -------------------------------------------
+// Loop through skins and generate styles (scoped)
+// -------------------------------------------
+@each $name, $data in $skins {
+	$subpages-border-color-default: map.get($data, border);
+	.ccchildpages.ccflex.#{$name} {
+		.ccchildpage {
+			// display: flex;
+			// flex-direction: column;
+			// height: 100%;
+			$base-bg: map.get($data, base-color);
+
+			// Legacy fallback for very old browsers that ignore var()
+			background: $base-bg;
+
+			@include gradient-background(
+				map.get($data, gradient),
+				map.get($data, gradient-light)
+			);
+			border-radius: 20px;
+
+			color: map.get($data, color);
+		}
+
+		.ccpage_title {
+			color: var(--ccpro-title-color, #{$title-color-default});
+		}
+
+		.cc-meta-info {
+			color: var(--ccpro-meta-color, inherit);
+
+			a {
+				color: var(--ccpro-meta-color, inherit);
+			}
+		}
+
+		.ccpages_excerpt {
+			color: var(--ccpro-excerpt-color, #{$excerpt-color-default});
+		}
+
+		.ccchildpage a {
+			color: inherit;
+			text-decoration: underline;
+
+			&:hover {
+				color: var(--ccpro-more-link-color, inherit);
+			}
+		}
+
+		.ccpages_excerpt {
+			padding: 1em;
+		}
+
+		.ccpages_more {
+			margin-top: auto;
+			text-align: right;
+			font-style: italic;
+			padding: 0.75em 0 0.75em 1em;
+
+			a {
+				color: var(--ccpro-more-link-color, #{$more-link-color-default});
+				text-decoration: none;
+
+				&:hover {
+					color: var(--ccpro-more-link-color, inherit);
+				}
+			}
+		}
+
+		.ccsubpages {
+			border-radius: 20px;
+			border: 2px
+				solid
+				var(--ccpro-subpages-border-color, #{$subpages-border-color-default});
+			padding: 0.5em;
+
+			a {
+				color: var(--ccpro-more-link-color, #{$more-link-color-default});
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// Overrides for inheriting text colour in block
+.wp-block-caterhamcomputing-cc-child-pages {
+	.ccchildpages.ccflex.simple .ccchildpage,
+	.ccchildpages.ccflex.ccred .ccchildpage,
+	.ccchildpages.ccflex.ccblue .ccchildpage,
+	.ccchildpages.ccflex.ccgreen .ccchildpage {
+		color: inherit;
+	}
+}
+
+// -------------------------------------------
+// Sleek modern blog card layout (scoped)
+// -------------------------------------------
+.ccchildpages.ccflex.ccsleek {
+	.ccchildpage {
+		// display: flex;
+		// flex-direction: column;
+		// height: 100%;
+		background: #fff;
+		border-radius: 12px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		.cc-child-pages-thumb {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+			object-fit: cover;
+			display: block;
+			border-bottom: 1px solid #eee;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			font-weight: 600;
+			color: #222;
+			margin: 0;
+			padding: 1em 1em 0.25em;
+		}
+
+		.cc-meta-info {
+			font-size: 0.8rem;
+			color: #888;
+			padding: 0 1em 0.5em;
+		}
+
+		.ccpages_excerpt {
+			padding: 0 1em;
+			color: #555;
+			font-size: 0.95rem;
+			line-height: 1.6;
+		}
+
+		.ccsubpages {
+			margin: 1em;
+			font-size: 0.85rem;
+			border-top: 1px solid #eee;
+			padding-top: 0.5em;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					margin-bottom: 0.25em;
+
+					a {
+						text-decoration: none;
+						color: #0073e6;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+
+					ul {
+						margin-left: 0.75em;
+					}
+				}
+			}
+		}
+
+		.ccpages_more {
+			margin-top: auto;
+			padding: 0.75em 1em;
+			background: #f7f9fa;
+			text-align: right;
+			border-top: 1px solid #eee;
+			font-weight: 500;
+
+			a {
+				color: #0073e6;
+				text-decoration: none;
+				font-weight: 500;
+
+				&:hover {
+					color: #005bb5;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------
+// Bold 2025-style editorial layout (scoped)
+// -------------------------------------------
+.ccchildpages.ccflex.ccbold {
+	.ccchildpage {
+		position: relative;
+		background: #fafafa;
+		color: #1a1a1a;
+		border-radius: 0 0 16px 16px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+		overflow: hidden;
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+		clip-path: polygon(0 0, 100% 0, 100% 93%, 50% 100%, 0 93%);
+
+		&:hover {
+			transform: translateY(-6px);
+			box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+		}
+
+		.cc-child-pages-thumb {
+			width: 100%;
+			aspect-ratio: 16 / 7;
+			object-fit: cover;
+			display: block;
+			filter: grayscale(10%) contrast(1.05);
+			border-bottom: 4px solid #000;
+		}
+
+		.ccpage_title {
+			padding: 1rem 1.5rem;
+			font-family: "Courier New", Courier, monospace;
+			// font-size: 1.5rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+			margin: 0;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+			max-width: 80%;
+		}
+
+		.ccpage_title,
+		.ccpage_title a {
+			background: #000;
+			color: #fff;
+
+			// Clamp to single line
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2; // clamp to a single line
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap; // single-line truncation
+		}
+
+		// If image is present, position h3 over image
+		&:has(.cc-child-pages-thumb) {
+			.ccpage_title {
+				position: absolute;
+				top: 1rem;
+				left: 0;
+				z-index: 2;
+			}
+
+			.cc-meta-info {
+				margin-top: 5rem;
+			}
+		}
+
+		.cc-meta-info {
+			padding: 0 1.25rem 0.25rem;
+			font-size: 0.8rem;
+			color: #777;
+			font-style: italic;
+			border-bottom: 1px dashed #ccc;
+		}
+
+		.ccpages_excerpt {
+			padding: 0.5rem 1.25rem 1rem;
+			font-size: 0.95rem;
+			line-height: 1.6;
+		}
+
+		.ccsubpages {
+			margin: 0 1.25rem 1rem;
+			font-size: 0.85rem;
+			padding: 0.5rem 0;
+			border-left: 4px solid #000;
+
+			& .ccsubpages_title {
+				margin: 0 1.25rem 1rem;
+			}
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding-left: 1rem;
+
+				li {
+					margin: 0.25rem 0;
+
+					a {
+						background: #000;
+						color: #fff;
+						padding: 0.2em 0.6em;
+						border-radius: 12px;
+						font-size: 0.8rem;
+						text-decoration: none;
+
+						&:hover {
+							background: #333;
+						}
+					}
+
+					ul {
+						margin-left: 1rem;
+					}
+				}
+			}
+		}
+
+		.ccpages_more {
+			margin-top: auto;
+			padding: 1rem 1.25rem;
+			background: #000;
+			color: #fff;
+			text-align: right;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-size: 0.85rem;
+
+			a {
+				color: #fff;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
