@@ -236,6 +236,7 @@ $item_class     = isset( $attributes['itemClass'] ) ? sanitize_html_class( $attr
 $cols           = isset( $attributes['cols'] ) ? max( 1, intval( $attributes['cols'] ) ) : 0;
 $thumbs         = isset( $attributes['thumbs'] ) ? sanitize_key( $attributes['thumbs'] ) : '';
 $link_thumbs    = array_key_exists( 'linkThumbs', $attributes ) ? ( cccp_bool_to_string( $attributes['linkThumbs'], true ) === 'true' ) : true;
+$lazy_load      = array_key_exists( 'lazyLoad', $attributes ) ? ( cccp_bool_to_string( $attributes['lazyLoad'], true ) === 'true' ) : false;
 $more_text      = isset( $attributes['more'] ) ? $attributes['more'] : '';
 $subpage_title  = isset( $attributes['subpageTitle'] ) ? $attributes['subpageTitle'] : '';
 $use_legacy_css = isset( $attributes['useLegacyCSS'] ) ? ( cccp_bool_to_string( $attributes['useLegacyCSS'] ) === 'true' ) : false;
@@ -361,6 +362,10 @@ $custom_thumbs_key = isset( $attributes['customThumbsField'] ) ? cccp_sanitize_m
 
 		if ( $link_thumbs ) {
 			$parts[] = 'link_thumbs="true"';
+		}
+
+		if ( $lazy_load ) {
+			$parts[] = 'lazy_load="true"';
 		}
 	}
 	if ( $use_cc_skin ) {

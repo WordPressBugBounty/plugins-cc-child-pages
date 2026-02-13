@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'caterhamcomputing/cc-child-pages',
-		'version' => '0.1.0',
+		'version' => '2.1.0',
 		'title' => 'CC Child Pages',
 		'category' => 'ccplugins',
 		'icon' => 'admin-page',
@@ -113,6 +113,10 @@ return array(
 				'default' => 'false'
 			),
 			'linkThumbs' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'lazyLoad' => array(
 				'type' => 'boolean',
 				'default' => false
 			),

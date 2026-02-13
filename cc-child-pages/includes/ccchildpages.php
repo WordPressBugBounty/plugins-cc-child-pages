@@ -17,7 +17,7 @@ class ccchildpages {
 	const plugin_name = 'CC Child Pages';
 
 	// Plugin version
-	const plugin_version = '1.43';
+	const plugin_version = CC_CHILD_PAGES_VERSION;
 
 	// ID Count
 	protected static $cc_id_counter;
@@ -75,7 +75,6 @@ class ccchildpages {
 				'link_thumbs'            => 'false',
 				'thumbs'                 => 'false',
 				'lazy_load'              => 'false',
-				'async_load'             => 'false',
 				'more'                   => __( 'Read more ...', 'cc-child-pages' ),
 				'link'                   => '',
 				'siblings'               => 'false',
@@ -103,6 +102,9 @@ class ccchildpages {
 		$a = shortcode_atts( $default_atts, $atts );
 
 		$a = apply_filters( 'ccchildpages_attributes', $a );
+
+		// Boolean values for checking lazy loading for images.
+		$lazy_load = apply_filters( 'cc_child_pages_lazy_load', strtolower( $a['lazy_load'] ) === 'true' );
 
 		// If we are displaying siblings, set starting point to page parent and add current page to exclude list
 		if ( strtolower( trim( $a['siblings'] ) ) == 'true' ) {
@@ -689,6 +691,10 @@ class ccchildpages {
 						'title' => $title_value,
 					);
 
+					if ( $lazy_load ) {
+						$thumb_attr['loading'] = 'lazy';
+					}
+
 					/* Check to see if custom thumbnails has been specified */
 					$use_custom_thumbs = ! empty( $a['use_custom_thumbs'] )
 					? sanitize_key( $a['use_custom_thumbs'] )
@@ -771,9 +777,13 @@ class ccchildpages {
 
 									if ( $attachment_id != false ) {
 										// Attachment found, get thumbnail
-										$thumbnail = wp_get_attachment_image( $attachment_id, $thumbs );
+										$thumbnail = wp_get_attachment_image( $attachment_id, $thumbs, false, $thumb_attr );
 									} else {
-										$thumbnail .= '<img src="' . $video_img . '" alt="' . $title_value . '" title="' . $title_value . '" class="cc-child-pages-thumb" />';
+										$thumbnail .= '<img src="' . $video_img . '" alt="' . $title_value . '" title="' . $title_value . '" class="cc-child-pages-thumb"';
+										if ( $lazy_load ) {
+											$thumbnail .= ' loading="lazy"';
+										}
+										$thumbnail .= ' />';
 									}
 								}
 							}
@@ -1035,6 +1045,49 @@ class ccchildpages {
 		}
 	}
 
+	public static function admin_upgrade_link_js() {
+		?>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+
+		const upgradeSpan = document.querySelector(
+			'#toplevel_page_cc-child-pages .ccchildpages-upgrade-menu'
+		);
+
+		if (upgradeSpan) {
+			const link = upgradeSpan.closest('a');
+			if (link) {
+				link.setAttribute('target', '_blank');
+				link.setAttribute('rel', 'noopener');
+			}
+		}
+
+	});
+	</script>
+		<?php
+	}
+
+	public static function admin_upgrade_link_css() {
+		?>
+	<style>
+	/* Upgrade menu styling */
+	#toplevel_page_cc-child-pages .ccchildpages-upgrade-menu {
+		font-weight: bold;
+		color: #ffffff !important;
+		background-color: #7A27FF !important;
+		padding: .3rem .6rem .3rem .3rem;
+		border-radius: .3rem
+	}
+
+	#toplevel_page_cc-child-pages .ccchildpages-upgrade-menu .dashicons {
+		font-size: 16px;
+		margin-right: 2px;
+		color: #ff9900;
+	}
+	</style>
+		<?php
+	}
+
 	private static function the_slug( $id ) {
 		$post_data = get_post( $id, ARRAY_A );
 		$slug      = $post_data['post_name'];
@@ -1063,7 +1116,7 @@ class ccchildpages {
 		);
 
 		// Settings / Docs links.
-		$settings_url = admin_url( 'options-general.php?page=cc-child-pages' );
+		$settings_url = admin_url( 'admin.php?page=cc-child-pages' );
 		$docs_url     = 'https://docs.ccplugins.co.uk/plugins/cc-child-pages/';
 		$examples_url = 'https://ccplugins.co.uk/examples/cc-child-pages/';
 
@@ -1099,11 +1152,14 @@ class ccchildpages {
 		echo '</p>';
 
 		// d) Footer with discreet upgrade + dismiss
-		echo '<p style="margin-top:8px; font-size:12px; opacity:.85">';
-		echo esc_html__( 'Need more skins and customisation options?', 'cc-child-pages' ) . ' ';
-		echo '<a href="' . esc_url( $upgrade_url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Upgrade to Pro', 'cc-child-pages' ) . '</a></p>';
+		if ( ! self::show_upgrade_notice() ) {
+			echo '<p style="margin-top:8px; font-size:12px; opacity:.85">';
+			echo esc_html__( 'Need more skins and customisation options?', 'cc-child-pages' ) . ' ';
+			echo '<a href="' . esc_url( $upgrade_url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Upgrade to Pro', 'cc-child-pages' ) . '</a></p>';
+		}
+
 		echo '<p style="margin-top:8px; font-size:12px; opacity:.85"><a href="' . esc_url( $dismiss_url ) . '">' . esc_html__( 'Hide this widget', 'cc-child-pages' ) . '</a>';
-		echo '</p>';
+			echo '</p>';
 
 		echo '</div>';
 	}
@@ -1299,8 +1355,43 @@ class ccchildpages {
 		$page_title = apply_filters( 'ccchildpages_menu_page_title', __( 'CC Child Pages', 'cc-child-pages' ) );
 		$menu_title = apply_filters( 'ccchildpages_menu_title', __( 'CC Child Pages', 'cc-child-pages' ) );
 
-		$function = apply_filters( 'ccchildpages_menu_function', array( 'ccchildpages', 'options_page' ) );
-		add_options_page( $page_title, $menu_title, 'manage_options', 'cc-child-pages', $function );
+		$function   = apply_filters( 'ccchildpages_menu_function', array( 'ccchildpages', 'options_page' ) );
+		$capability = apply_filters( 'ccchildpages_menu_capability', 'manage_options' );
+		$menu_slug  = apply_filters( 'ccchildpages_menu_slug', 'cc-child-pages' );
+		$icon       = apply_filters( 'ccchildpages_menu_icon', 'dashicons-screenoptions' );
+		$position   = apply_filters( 'ccchildpages_menu_position', null );
+
+		// Top-level menu.
+		add_menu_page(
+			$page_title,
+			$menu_title,
+			$capability,
+			$menu_slug,
+			$function,
+			$icon,
+			$position
+		);
+
+		// “Settings” submenu (same page for now).
+		add_submenu_page(
+			$menu_slug,
+			__( 'Settings', 'cc-child-pages' ),
+			__( 'Settings', 'cc-child-pages' ),
+			$capability,
+			$menu_slug,
+			$function
+		);
+
+		// External "Upgrade" submenu item.
+		if ( ! self::show_upgrade_notice() ) {
+			add_submenu_page(
+				$menu_slug,
+				__( 'Upgrade to Pro', 'cc-child-pages' ),
+				'<span class="ccchildpages-upgrade-menu"><span class="dashicons dashicons-star-filled"></span> ' . __( 'Upgrade', 'cc-child-pages' ) . '</span>',
+				$capability,
+				'https://ccplugins.co.uk/wordpress-plugins-by-cc-plugins/cc-child-pages-pro/',
+				null
+			);}
 	}
 
 	// Display options page
@@ -1583,7 +1674,7 @@ class ccchildpages {
 		$cc_links = array();
 
 		if ( $current_plugin == 'cc-child-pages' ) {
-			$cc_links[] = '<a href="options-general.php?page=cc-child-pages">' . __( 'Settings...', 'cc-child-pages' ) . '</a>';
+			$cc_links[] = '<a href="admin.php?page=cc-child-pages">' . __( 'Settings...', 'cc-child-pages' ) . '</a>';
 			$cc_links[] = '<a href="https://wordpress.org/support/view/plugin-reviews/cc-child-pages" target="_blank"><strong>' . __( 'Rate this plugin...', 'cc-child-pages' ) . '</strong></a>';
 		}
 
@@ -1785,6 +1876,7 @@ class ccchildpages {
 	public static function show_upgrade_notice() {
 		$pro_present = defined( 'CCCP_PRO_VER' )
 		|| class_exists( '\CaterhamComputing\CCChildPagesPro\Plugin' )
+		|| function_exists( 'ccpro_css_version' )
 		|| apply_filters( 'ccchildpages/pro_present', false );
 
 		return $pro_present;

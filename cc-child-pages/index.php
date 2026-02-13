@@ -1,13 +1,14 @@
 <?php
 /**
  * Plugin Name: CC Child Pages
- * Plugin URI: https://caterhamcomputing.co.uk/
- * Description: Show links to child pages
- * Version:           2.0.2
+ * Plugin URI: https://ccplugins.co.uk/plugins/cc-child-pages/
+ * Description: Display WordPress child pages in a responsive grid or list using a shortcode, Gutenberg block or Elementor widget.
+ * Version:           2.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author: Caterham Computing
- * License:           GPL-2.0-or-later
+ * Author URI: https://caterhamcomputing.co.uk
+ * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       cc-child-pages
  * Domain Path:       /languages
@@ -18,6 +19,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+/**
+ * Set up constants used within the plugin
+ */
+define( 'CC_CHILD_PAGES_VERSION', '2.1.0' );
+
+
 /**
  * Registers the block using a `blocks-manifest.php` file, which improves the performance of block type registration.
  * Behind the scenes, it also registers all assets so they can be enqueued
@@ -164,3 +172,28 @@ if ( version_compare( get_bloginfo( 'version' ), '5.8', '>=' ) ) {
 } else {
 	add_filter( 'block_categories', 'ccplugins_insert_category_after_media', 10, 2 );
 }
+
+
+/**
+ * Elementor integration.
+ */
+add_action(
+	'plugins_loaded',
+	function () {
+
+		// Elementor not active or not yet loaded.
+		if ( ! did_action( 'elementor/loaded' ) ) {
+			return;
+		}
+
+		// Ensure our core class exists (skin list comes from here).
+		if ( ! class_exists( '\ccchildpages' ) ) {
+			return;
+		}
+
+		require_once __DIR__ . '/includes/elementor/class-elementor-integration.php';
+
+		$integration = new \CaterhamComputing\CCChildPages\Elementor\Elementor_Integration();
+		$integration->init();
+	}
+);
