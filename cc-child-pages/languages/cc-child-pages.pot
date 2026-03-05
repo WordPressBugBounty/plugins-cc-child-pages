@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: CC Child Pages 2.1.0\n"
+"Project-Id-Version: CC Child Pages 2.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cc-child-pages\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-13T10:00:30+00:00\n"
+"POT-Creation-Date: 2026-03-05T16:42:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cc-child-pages\n"
@@ -87,7 +87,8 @@ msgstr ""
 
 #: includes/ccchildpages.php:1150
 #: includes/ccchildpages.php:1664
-#: src/cc-child-pages/edit.js:227
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:268
 msgid "Documentation"
 msgstr ""
 
@@ -170,37 +171,43 @@ msgstr ""
 
 #: includes/ccchildpages.php:1810
 #: includes/ccchildpages.php:1818
-#: includes/elementor/widgets/class-child-pages-widget.php:216
-#: includes/elementor/widgets/class-child-pages-widget.php:445
-#: src/cc-child-pages/edit.js:116
+#: includes/elementor/widgets/class-child-pages-widget.php:231
+#: includes/elementor/widgets/class-child-pages-widget.php:487
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:121
 msgid "Simple"
 msgstr ""
 
 #: includes/ccchildpages.php:1811
 #: includes/ccchildpages.php:1819
-#: src/cc-child-pages/edit.js:117
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:122
 msgid "Red"
 msgstr ""
 
 #: includes/ccchildpages.php:1812
 #: includes/ccchildpages.php:1820
-#: src/cc-child-pages/edit.js:118
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:123
 msgid "Green"
 msgstr ""
 
 #: includes/ccchildpages.php:1813
 #: includes/ccchildpages.php:1821
-#: src/cc-child-pages/edit.js:119
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:124
 msgid "Blue"
 msgstr ""
 
 #: includes/ccchildpages.php:1814
-#: src/cc-child-pages/edit.js:120
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:125
 msgid "Sleek"
 msgstr ""
 
 #: includes/ccchildpages.php:1815
-#: src/cc-child-pages/edit.js:121
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:126
 msgid "Bold"
 msgstr ""
 
@@ -249,12 +256,14 @@ msgid "Page author"
 msgstr ""
 
 #: includes/ccchildpages_widget.php:144
-#: src/cc-child-pages/edit.js:992
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1621
 msgid "Comment count"
 msgstr ""
 
 #: includes/ccchildpages_widget.php:145
-#: src/cc-child-pages/edit.js:988
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1614
 msgid "Random"
 msgstr ""
 
@@ -315,733 +324,875 @@ msgid "Value of 2 (or greater) specifies the depth (or level) to descend in disp
 msgstr ""
 
 #: includes/elementor/class-elementor-integration.php:35
-#: index.php:137
 msgid "CC Plugins"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:51
-#: src/cc-child-pages/edit.js:168
-#: src/cc-child-pages/edit.js:843
+#: includes/elementor/widgets/class-child-pages-widget.php:61
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:181
+#: src/cc-child-pages/edit.js:1342
 msgid "Query"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:59
+#: includes/elementor/widgets/class-child-pages-widget.php:69
 msgid "Pages to show"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:63
+#: includes/elementor/widgets/class-child-pages-widget.php:73
 msgid "Children of current page"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:64
+#: includes/elementor/widgets/class-child-pages-widget.php:74
 msgid "Children of a specific parent ID"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:65
+#: includes/elementor/widgets/class-child-pages-widget.php:75
 msgid "Specific pages (comma-separated IDs)"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:66
+#: includes/elementor/widgets/class-child-pages-widget.php:76
 msgid "Siblings of current page"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:68
+#: includes/elementor/widgets/class-child-pages-widget.php:78
 msgid "When using templates, you may need to set a specific parent ID."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:75
+#: includes/elementor/widgets/class-child-pages-widget.php:90
 msgid "Parent page ID"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:80
-msgid "Used when “Children of a specific parent ID” is selected."
+#: includes/elementor/widgets/class-child-pages-widget.php:95
+msgid "Used when “Children of a specific parent ID” is selected. Use 0 to show top-level pages."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:87
+#: includes/elementor/widgets/class-child-pages-widget.php:102
 msgid "Page IDs"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:91
+#: includes/elementor/widgets/class-child-pages-widget.php:106
 msgid "Comma-separated list of page or post IDs to include."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:98
-#: src/cc-child-pages/edit.js:1051
+#: includes/elementor/widgets/class-child-pages-widget.php:113
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1703
 msgid "Depth"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:109
-#: src/cc-child-pages/edit.js:869
+#: includes/elementor/widgets/class-child-pages-widget.php:124
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1386
 msgid "Include current page"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:119
-#: src/cc-child-pages/edit.js:955
+#: includes/elementor/widgets/class-child-pages-widget.php:134
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1531
 msgid "Order by"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:123
-#: src/cc-child-pages/edit.js:960
+#: includes/elementor/widgets/class-child-pages-widget.php:138
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1544
 msgid "Menu order"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:124
-#: src/cc-child-pages/edit.js:413
-#: src/cc-child-pages/edit.js:970
+#: includes/elementor/widgets/class-child-pages-widget.php:139
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:585
+#: src/cc-child-pages/edit.js:1572
 msgid "Title"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:125
-#: src/cc-child-pages/edit.js:978
+#: includes/elementor/widgets/class-child-pages-widget.php:140
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1593
 msgid "Date"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:133
-#: src/cc-child-pages/edit.js:1023
+#: includes/elementor/widgets/class-child-pages-widget.php:148
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1655
 msgid "Order"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:146
-#: src/cc-child-pages/edit.js:1079
+#: includes/elementor/widgets/class-child-pages-widget.php:161
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1752
 msgid "Offset"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:157
+#: includes/elementor/widgets/class-child-pages-widget.php:172
 msgid "Limit"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:161
+#: includes/elementor/widgets/class-child-pages-widget.php:176
 msgid "-1 means no limit."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:168
+#: includes/elementor/widgets/class-child-pages-widget.php:183
 msgid "Posts per page (pagination)"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:172
+#: includes/elementor/widgets/class-child-pages-widget.php:187
 msgid "-1 disables pagination in most setups."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:184
+#: includes/elementor/widgets/class-child-pages-widget.php:199
 msgid "Layout"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:192
+#: includes/elementor/widgets/class-child-pages-widget.php:207
 msgid "Force list layout"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:202
-#: src/cc-child-pages/edit.js:258
+#: includes/elementor/widgets/class-child-pages-widget.php:217
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:316
 msgid "Columns"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:208
+#: includes/elementor/widgets/class-child-pages-widget.php:223
 msgid "Leave blank to use the skin default."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:236
-#: src/cc-child-pages/edit.js:312
+#: includes/elementor/widgets/class-child-pages-widget.php:251
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:403
 msgid "Skin"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:247
+#: includes/elementor/widgets/class-child-pages-widget.php:262
 msgid "Show thumbnails"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:258
+#: includes/elementor/widgets/class-child-pages-widget.php:273
 msgid "Link thumbnails"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:272
-#: src/cc-child-pages/edit.js:377
+#: includes/elementor/widgets/class-child-pages-widget.php:287
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:532
 msgid "Lazy load images"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:286
+#: includes/elementor/widgets/class-child-pages-widget.php:301
 msgid "Link titles"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:303
-#: src/cc-child-pages/edit.js:274
+#: includes/elementor/widgets/class-child-pages-widget.php:318
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:339
 msgid "Use legacy CSS"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:313
+#: includes/elementor/widgets/class-child-pages-widget.php:328
 msgid "Extra CSS class"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:315
+#: includes/elementor/widgets/class-child-pages-widget.php:330
 msgid "Added to the shortcode wrapper."
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:328
+#: includes/elementor/widgets/class-child-pages-widget.php:343
 msgid "Content display"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:337
+#: includes/elementor/widgets/class-child-pages-widget.php:352
 msgid "Hide title"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:347
+#: includes/elementor/widgets/class-child-pages-widget.php:362
 msgid "Hide excerpt"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:357
+#: includes/elementor/widgets/class-child-pages-widget.php:372
 msgid "Hide “Read more …” link"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:367
-#: src/cc-child-pages/edit.js:565
+#: includes/elementor/widgets/class-child-pages-widget.php:382
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:859
 msgid "Truncate excerpt"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:377
+#: includes/elementor/widgets/class-child-pages-widget.php:392
 msgid "Excerpt words"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:389
+#: includes/elementor/widgets/class-child-pages-widget.php:404
 msgid "Heading"
 msgstr ""
 
-#: includes/elementor/widgets/class-child-pages-widget.php:391
+#: includes/elementor/widgets/class-child-pages-widget.php:406
 msgid "Optional heading shown above the grid or list."
 msgstr ""
 
-#: src/cc-child-pages/edit.js:167
-#: src/cc-child-pages/edit.js:176
-msgid "Design"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:184
-msgid "CC Child Pages Pro"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:187
-msgid "Get advanced layouts, extra skins, and priority support."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:212
-#: src/components/ProUpsell.jsx:45
-#: src/components/ProUpsell.jsx:74
-msgid "Learn more"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:242
-msgid "Mode"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:246
-msgid "Cards"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:250
-msgid "List"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:259
-msgid "Number of columns to display (1 to 6)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:275
-msgid "Switch to old CSS for backwards compatibility (only recommened if you are having major layout issues). Newer skins will not work when this is enabled."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:291
-msgid "Skins"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:304
-msgid "Use skin"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:325
-msgid "Item class(es)"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:326
-msgid "Optional CSS class names applied to the CC Child Pages wrapper."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:342
-msgid "Image"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:363
-msgid "Link image to post"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:389
-msgid "Use custom thumbnail URL"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:393
-msgid "If enabled, the value from the given meta key will replace the thumbnail (when present)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:397
-msgid "Thumbnail field key"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:401
-msgid "Meta key used for thumbnail URL override (e.g. \"custom_link_target\")."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:426
-msgid "Show title"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:440
-msgid "Link title to post"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:457
-msgid "Use custom CSS class for linked titles"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:469
-msgid "Linked title class(es)"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:473
-msgid "Optional CSS class names applied to linked title."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:496
-msgid "Use custom title"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:500
-msgid "If enabled, the value from the given meta key will replace the title (when present)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:504
-msgid "Title field key"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:508
-msgid "Meta key used for title override (e.g. \"custom_title\")."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:520
-msgid "Excerpt"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:533
-msgid "Show excerpt"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:548
-msgid "Use full post/page content"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:573
-msgid "Word count"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:574
-msgid "Word count for excerpt."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:610
-msgid "Show WordPress more link"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:627
-msgid "Use custom excerpt"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:631
-msgid "If enabled, the value from the given meta key will replace the excerpt (when present)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:635
-msgid "Excerpt field key"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:639
-msgid "Meta key used for excerpt override (e.g. \"custom_excerpt\")."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:650
-msgid "Read more"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:663
-msgid "Show more"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:671
-msgid "Read more text"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:672
-msgid "Optional custom text to replace the \"Read more...\" message."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:690
-msgid "Use custom read more text"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:694
-msgid "If enabled, the value from the given meta key will replace the read more (when present)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:698
-msgid "More field key"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:702
-msgid "Meta key used for read more text override (e.g. \"custom_excerpt\")."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:714
-msgid "Meta"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:727
-msgid "Show author"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:741
-msgid "Show date created"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:756
-msgid "Show date modified"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:766
-#: src/cc-child-pages/edit.js:770
-msgid "Link"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:774
-msgid "If specified, will override the link for ALL cards."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:794
-msgid "Use custom link"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:795
-msgid "If enabled, the value from the given meta key will replace the link (when present)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:799
-msgid "Link field key"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:800
-msgid "Meta key used for link override (e.g. \"custom_link\")."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:815
-msgid "Use custom link target"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:819
-msgid "If enabled, the value from the given meta key will replace the link target (when present)."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:823
-msgid "Link target field key"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:827
-msgid "Meta key used for link target override (e.g. \"custom_link_target\")."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:854
-msgid "Show page siblings"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:887
-msgid "Only display selected pages"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:898
-#: src/cc-child-pages/edit.js:918
-msgid "Select pages or posts"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:937
-msgid "Exclude"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:938
-msgid "Exclude specific pages or posts"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:963
-msgid "None"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:964
-msgid "ID"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:966
-msgid "Author"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:974
-msgid "Name (slug)"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:977
-msgid "Type"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:980
-msgid "Modified"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:984
-msgid "Parent ID"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:996
-msgid "Preserve post__in order"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1003
-msgid "Preserve post_name__in order"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1010
-msgid "Preserve post_parent__in order"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1017
-msgid "Default is “menu_order”. Some options only apply with certain queries."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1027
-msgid "Ascending"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1031
-msgid "Descending"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1043
-msgid "Statuses"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1044
-msgid "Statuses to include when querying posts."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1052
-msgid "1 to 10 levels."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1065
-msgid "Sub-page title"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1066
-msgid "Optional title to be shown when sub-pages are listed for a page in card view."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1109
-msgid "Limit number of results"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1114
-msgid "Limit page"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1115
-msgid "1 to 100."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1137
-msgid "Ignore sticky posts"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1141
-msgid "Pagination"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1152
-msgid "Use pagination"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1157
-msgid "Posts per page"
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1158
-msgid "1 to 50."
-msgstr ""
-
-#: src/cc-child-pages/edit.js:1172
-msgid "Page"
-msgstr ""
-
-#: src/components/CustomMetaToggle.jsx:33
-msgid "Use custom field"
-msgstr ""
-
-#: src/components/CustomMetaToggle.jsx:35
-msgid "Custom field key"
-msgstr ""
-
-#: src/components/CustomMetaToggle.jsx:36
-msgid "Enter the meta key (e.g. \"custom_excerpt\"). If present on a post, its value will override the default."
-msgstr ""
-
-#: src/components/CustomMetaToggle.jsx:86
-msgid "Please enter a custom field key or turn this option off."
-msgstr ""
-
+#: build/cc-child-pages/index.js:1
 #: src/components/ImageSelectSize.jsx:22
 msgid "Image Size"
 msgstr ""
 
-#: src/components/LinkTargetControl.jsx:18
-msgid "Auto (theme/default)"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:19
-msgid "Same tab (_self)"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:20
-msgid "New tab (_blank)"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:22
-msgid "Parent frame (_parent)"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:25
-msgid "Top frame (_top)"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:35
-msgid "Use a custom target (advanced)"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:48
-msgid "Link target"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:59
-msgid "Custom target name"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:60
-msgid "e.g. sidebar-frame"
-msgstr ""
-
-#: src/components/LinkTargetControl.jsx:63
-msgid "Use _self, _blank, _parent, _top or a named context (letters, numbers, \"-\", \"_\", \":\")."
-msgstr ""
-
+#: build/cc-child-pages/index.js:1
 #: src/components/PostAutocomplete.jsx:24
 msgid "Select a page or post"
 msgstr ""
 
 #. Translators: %1$s is the post title, %2$s is the post type (e.g., Page, Post).
+#: build/cc-child-pages/index.js:4
 #: src/components/PostAutocomplete.jsx:66
 #, js-format
 msgid "%1$s (%2$s)"
 msgstr ""
 
-#: src/components/PostAutocomplete.jsx:290
+#: build/cc-child-pages/index.js:4
+#: src/components/PostAutocomplete.jsx:309
 msgid "Selected (drag order):"
 msgstr ""
 
-#: src/components/PostAutocomplete.jsx:296
-#: src/components/PostAutocomplete.jsx:297
-#: src/components/PostAutocomplete.jsx:299
+#: build/cc-child-pages/index.js:4
+#: src/components/PostAutocomplete.jsx:315
+#: src/components/PostAutocomplete.jsx:316
+#: src/components/PostAutocomplete.jsx:318
 msgid "Sort A-Z"
 msgstr ""
 
 #. Translators: %s is the numeric post ID.
-#: src/components/PostAutocomplete.jsx:310
+#: build/cc-child-pages/index.js:7
+#: src/components/PostAutocomplete.jsx:331
 #, js-format
 msgid "#%s"
 msgstr ""
 
-#: src/components/PostAutocomplete.jsx:332
+#: build/cc-child-pages/index.js:7
+#: src/components/PostAutocomplete.jsx:353
 msgid "Move left (Shift: to start)"
 msgstr ""
 
 #. translators: %s: the selected item label, e.g. "About (Page)".
-#: src/components/PostAutocomplete.jsx:339
+#: build/cc-child-pages/index.js:8
+#: src/components/PostAutocomplete.jsx:365
 #, js-format
 msgid "Move %s left"
 msgstr ""
 
-#: src/components/PostAutocomplete.jsx:347
+#: build/cc-child-pages/index.js:8
+#: src/components/PostAutocomplete.jsx:376
 msgid "Move right (Shift: to end)"
 msgstr ""
 
 #. translators: %s: the selected item label, e.g. "About (Page)".
-#: src/components/PostAutocomplete.jsx:354
+#: build/cc-child-pages/index.js:9
+#: src/components/PostAutocomplete.jsx:388
 #, js-format
 msgid "Move %s right"
 msgstr ""
 
 #. translators: %s: the item label, e.g. "About (Page)".
-#: src/components/PostAutocomplete.jsx:371
-#: src/components/PostAutocomplete.jsx:376
+#: build/cc-child-pages/index.js:10
+#: build/cc-child-pages/index.js:11
+#: src/components/PostAutocomplete.jsx:410
+#: src/components/PostAutocomplete.jsx:415
 #, js-format
 msgid "Remove %s"
 msgstr ""
 
-#: src/components/PostAutocomplete.jsx:389
+#: build/cc-child-pages/index.js:11
+#: src/components/PostAutocomplete.jsx:431
 msgid "Clear selection"
 msgstr ""
 
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:19
+msgid "Auto (theme/default)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:23
+msgid "Same tab (_self)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:27
+msgid "New tab (_blank)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:31
+msgid "Parent frame (_parent)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:35
+msgid "Top frame (_top)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:47
+msgid "Use a custom target (advanced)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:63
+msgid "Link target"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:74
+msgid "Custom target name"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:75
+msgid "e.g. sidebar-frame"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/LinkTargetControl.jsx:78
+msgid "Use _self, _blank, _parent, _top or a named context (letters, numbers, \"-\", \"_\", \":\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
 #: src/components/PostStatusSelector.jsx:33
 msgid "Post status"
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:74
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:78
 msgid "Couldn't load post statuses. You may need permission to view them."
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:109
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:113
 msgid "Any (all public statuses)"
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:155
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:163
 msgid "Choose one or more statuses. Selecting \"Any\" will clear other choices."
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:196
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:215
 msgid "Select all"
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:205
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:224
 msgid "Clear"
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:214
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:233
 msgid "Refresh"
 msgstr ""
 
-#: src/components/PostStatusSelector.jsx:240
+#: build/cc-child-pages/index.js:11
+#: src/components/PostStatusSelector.jsx:266
 msgid "No statuses available."
 msgstr ""
 
-#: src/components/ProUpsell.jsx:28
+#: build/cc-child-pages/index.js:11
+#: src/components/CustomMetaToggle.jsx:33
+msgid "Use custom field"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/CustomMetaToggle.jsx:35
+msgid "Custom field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/CustomMetaToggle.jsx:36
+msgid "Enter the meta key (e.g. \"custom_excerpt\"). If present on a post, its value will override the default."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/components/CustomMetaToggle.jsx:92
+msgid "Please enter a custom field key or turn this option off."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:177
+#: src/cc-child-pages/edit.js:190
+msgid "Design"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:208
+msgid "CC Child Pages Pro"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:214
+msgid "Get advanced layouts, extra skins, and priority support."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:244
+#: src/components/ProUpsell.jsx:51
+#: src/components/ProUpsell.jsx:86
+msgid "Learn more"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:287
+msgid "Mode"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:296
+msgid "Cards"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:303
+msgid "List"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:320
+msgid "Number of columns to display (1 to 6)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:343
+msgid "Switch to old CSS for backwards compatibility (only recommened if you are having major layout issues). Newer skins will not work when this is enabled."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:362
+msgid "Skins"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:391
+msgid "Use skin"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:429
+msgid "Item class(es)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:433
+msgid "Optional CSS class names applied to the CC Child Pages wrapper."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:456
+msgid "Image"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:501
+msgid "Link image to post"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:559
+msgid "Use custom thumbnail URL"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:563
+msgid "If enabled, the value from the given meta key will replace the thumbnail (when present)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:567
+msgid "Thumbnail field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:571
+msgid "Meta key used for thumbnail URL override (e.g. \"custom_link_target\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:614
+msgid "Show title"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:644
+msgid "Link title to post"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:678
+msgid "Use custom CSS class for linked titles"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:690
+msgid "Linked title class(es)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:694
+msgid "Optional CSS class names applied to linked title."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:740
+msgid "Use custom title"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:744
+msgid "If enabled, the value from the given meta key will replace the title (when present)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:748
+msgid "Title field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:752
+msgid "Meta key used for title override (e.g. \"custom_title\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:766
+msgid "Excerpt"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:795
+msgid "Show excerpt"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:828
+msgid "Use full post/page content"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:870
+msgid "Word count"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:874
+msgid "Word count for excerpt."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:951
+msgid "Show WordPress more link"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:980
+msgid "Use custom excerpt"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:984
+msgid "If enabled, the value from the given meta key will replace the excerpt (when present)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:988
+msgid "Excerpt field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:992
+msgid "Meta key used for excerpt override (e.g. \"custom_excerpt\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1005
+msgid "Read more"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1034
+msgid "Show more"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1046
+msgid "Read more text"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1050
+msgid "Optional custom text to replace the \"Read more...\" message."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1091
+msgid "Use custom read more text"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1095
+msgid "If enabled, the value from the given meta key will replace the read more (when present)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1099
+msgid "More field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1103
+msgid "Meta key used for read more text override (e.g. \"custom_excerpt\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1117
+msgid "Meta"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1146
+msgid "Show author"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1176
+msgid "Show date created"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1206
+msgid "Show date modified"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1221
+#: src/cc-child-pages/edit.js:1228
+msgid "Link"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1241
+msgid "If specified, will override the link for ALL cards."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1276
+msgid "Use custom link"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1280
+msgid "If enabled, the value from the given meta key will replace the link (when present)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1284
+msgid "Link field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1288
+msgid "Meta key used for link override (e.g. \"custom_link\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1313
+msgid "Use custom link target"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1317
+msgid "If enabled, the value from the given meta key will replace the link target (when present)."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1321
+msgid "Link target field key"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1325
+msgid "Meta key used for link target override (e.g. \"custom_link_target\")."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1361
+msgid "Show page siblings"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1419
+msgid "Only display selected pages"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1430
+#: src/cc-child-pages/edit.js:1468
+msgid "Select pages or posts"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1504
+msgid "Exclude"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1508
+msgid "Exclude specific pages or posts"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1551
+msgid "None"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1558
+msgid "ID"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1565
+msgid "Author"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1579
+msgid "Name (slug)"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1586
+msgid "Type"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1600
+msgid "Modified"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1607
+msgid "Parent ID"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1628
+msgid "Preserve post__in order"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1635
+msgid "Preserve post_name__in order"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1642
+msgid "Preserve post_parent__in order"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1649
+msgid "Default is “menu_order”. Some options only apply with certain queries."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1664
+msgid "Ascending"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1671
+msgid "Descending"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1692
+msgid "Statuses"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1696
+msgid "Statuses to include when querying posts."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1707
+msgid "1 to 10 levels."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1728
+msgid "Sub-page title"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1732
+msgid "Optional title to be shown when sub-pages are listed for a page in card view."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1800
+msgid "Limit number of results"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1808
+msgid "Limit page"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1812
+msgid "1 to 100."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1844
+msgid "Ignore sticky posts"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1853
+msgid "Pagination"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1873
+msgid "Use pagination"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1882
+msgid "Posts per page"
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1886
+msgid "1 to 50."
+msgstr ""
+
+#: build/cc-child-pages/index.js:11
+#: src/cc-child-pages/edit.js:1908
+msgid "Page"
+msgstr ""
+
+#: src/components/ProUpsell.jsx:34
 msgid "PRO"
 msgstr ""
 
-#: src/components/ProUpsell.jsx:67
+#: src/components/ProUpsell.jsx:77
 msgid "(Pro)"
 msgstr ""
 
+#: build/cc-child-pages/block.json
 #: src/cc-child-pages/block.json
 msgctxt "block title"
 msgid "CC Child Pages"
 msgstr ""
 
+#: build/cc-child-pages/block.json
 #: src/cc-child-pages/block.json
 msgctxt "block description"
 msgid "Display a list of child pages with flexible layouts, skins, and query options."

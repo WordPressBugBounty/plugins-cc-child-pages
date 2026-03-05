@@ -4,7 +4,7 @@ Donate link: https://ccplugins.co.uk/donate/
 Tags: child pages, subpages, page navigation, page list, elementor
 Requires at least: 6.7
 Tested up to: 6.9
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 Requires PHP: 7.4
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -380,15 +380,22 @@ Yes. All text strings are translatable via standard `.po` and `.mo` files.
 
 == Upgrade Notice ==
 
-= 2.1.0 =
+= 2.1.1 =
+Fixes an issue with the Elementor widget that could prevent it from being deleted, reordered or moved within the Elementor editor. Existing layouts continue to work normally. Also, allows allows parent page ID to be set to 0 to show all top level pages.
 
+= 2.1.0 =
 Introduces Elementor widget integration and improved documentation.
 
 = 2.0.0 =
-
 Major update introducing Gutenberg block and modern CSS system.
 
 == Changelog ==
+
+= 2.1.1 =
+* Fixed: Issue with the CC Child Pages Elementor widget that could prevent the widget from being deleted, reordered or moved within the Elementor editor.
+* Fixed: Allows allows parent page ID to be set to 0 to show all top level pages.
+* Changed: Internal Elementor control key renamed from `id` to `parent_page_id` to avoid a conflict with Elementor's internal model attributes.
+* Compatibility: Existing Elementor layouts remain fully compatible through automatic fallback to the legacy `id` setting.
 
 = 2.1.0 =
 * Added Elementor widget integration

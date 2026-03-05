@@ -19,7 +19,17 @@ final class Child_Pages_Widget extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'CC Child Pages', 'cc-child-pages' );
+		$title = __( 'CC Child Pages', 'cc-child-pages' );
+
+		/**
+		 * Filter the Elementor widget title.
+		 *
+		 * @since 2.1.1
+		 *
+		 * @param string $title  Default widget title.
+		 * @param self   $widget Widget instance.
+		 */
+		return apply_filters( 'cc_child_pages/elementor/widget_title', $title, $this );
 	}
 
 	public function get_icon() {
@@ -69,15 +79,20 @@ final class Child_Pages_Widget extends Widget_Base {
 			)
 		);
 
+		/**
+		 * IMPORTANT:
+		 * Do not use a control key named "id" in Elementor widgets.
+		 * Elementor/Backbone use "id" internally for model identity, and collisions can break delete/reorder in the editor.
+		 */
 		$this->add_control(
-			'id',
+			'parent_page_id',
 			array(
 				'label'       => __( 'Parent page ID', 'cc-child-pages' ),
 				'type'        => Controls_Manager::NUMBER,
-				'min'         => 1,
+				'min'         => 0,
 				'step'        => 1,
 				'condition'   => array( 'source' => 'parent_id' ),
-				'description' => __( 'Used when “Children of a specific parent ID” is selected.', 'cc-child-pages' ),
+				'description' => __( 'Used when “Children of a specific parent ID” is selected. Use 0 to show top-level pages.', 'cc-child-pages' ),
 			)
 		);
 
@@ -415,8 +430,35 @@ final class Child_Pages_Widget extends Widget_Base {
 
 		if ( 'siblings' === $source ) {
 			$atts['siblings'] = 'true';
-		} elseif ( 'parent_id' === $source && ! empty( $settings['id'] ) ) {
-			$atts['id'] = (string) absint( $settings['id'] );
+		} elseif ( 'parent_id' === $source ) {
+
+			/**
+			 * Back-compat:
+			 * Older versions stored this as "id". We now use "parent_page_id" to avoid collisions with Elementor's internal "id".
+			 *
+			 * Note: 0 is valid (top-level pages), so we must not use empty() checks.
+			 */
+			$parent_id = null;
+
+			if ( array_key_exists( 'parent_page_id', $settings ) && '' !== $settings['parent_page_id'] && null !== $settings['parent_page_id'] ) {
+				$parent_id = absint( $settings['parent_page_id'] );
+			} elseif ( array_key_exists( 'id', $settings ) && '' !== $settings['id'] && null !== $settings['id'] ) {
+				// Legacy saved setting.
+				$parent_id = absint( $settings['id'] );
+			}
+
+			/**
+			 * Normalise settings so extensions always see both keys.
+			 * Elementor previously stored this as "id".
+			 */
+			if ( null !== $parent_id ) {
+				$settings['parent_page_id'] = $parent_id;
+				$settings['id']             = $parent_id;
+			}
+
+			if ( null !== $parent_id && $parent_id >= 0 ) {
+				$atts['id'] = (string) $parent_id; // Shortcode still expects "id".
+			}
 		} elseif ( 'page_ids' === $source && ! empty( $settings['page_ids'] ) ) {
 			$page_ids = preg_replace( '/[^0-9,]/', '', (string) $settings['page_ids'] );
 			$page_ids = trim( $page_ids, ',' );

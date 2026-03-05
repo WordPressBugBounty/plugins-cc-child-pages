@@ -3,7 +3,7 @@
  * Plugin Name: CC Child Pages
  * Plugin URI: https://ccplugins.co.uk/plugins/cc-child-pages/
  * Description: Display WordPress child pages in a responsive grid or list using a shortcode, Gutenberg block or Elementor widget.
- * Version:           2.1.0
+ * Version:           2.1.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author: Caterham Computing
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Set up constants used within the plugin
  */
-define( 'CC_CHILD_PAGES_VERSION', '2.1.0' );
+define( 'CC_CHILD_PAGES_VERSION', '2.1.1' );
 
 
 /**
@@ -73,9 +73,6 @@ add_action( 'init', 'caterhamcomputing_cc_child_pages_block_init' );
  * CC Child Pages shortcode and widget
  */
 require_once 'includes/ccchildpages.php';
-// in your main plugin bootstrap
-// require_once __DIR__ . '/blocks/cc-child-pages/index.php';
-
 
 add_shortcode( 'child_pages', 'ccchildpages::show_child_pages' );
 add_action( 'wp_enqueue_scripts', 'ccchildpages::enqueue_styles' );
